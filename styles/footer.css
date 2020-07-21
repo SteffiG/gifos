@@ -1,0 +1,60 @@
+.end {
+  height: 201px;
+  background: #572EE5;
+}
+
+.end .end-content {
+  padding: 47px 0 23px 0;
+  background: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.end .end-content .end-share {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.end .end-content .end-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.end .end-content .end-icons .end-link {
+  color: #CDD6E0;
+}
+
+.end .end-content .end-icons .end-link .fab {
+  width: 18px;
+  height: 16.2;
+}
+
+.end .end-content .end-icons .end-link .fa-twitter {
+  padding: 0 19px 47.8px 19px;
+}
+
+.end .end-content .end-author {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+/*# sourceMappingURL=footer.css.map */

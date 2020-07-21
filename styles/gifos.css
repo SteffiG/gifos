@@ -1,0 +1,25 @@
+.gifos {
+  background: #F3F5F8;
+  margin: 0;
+}
+
+.gifos .gifos-title {
+  padding-top: 46px;
+  padding-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.gifos .gifos-paragraph {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 23px;
+  padding-bottom: 32px;
+  margin: 0;
+}
+/*# sourceMappingURL=gifos.css.map */

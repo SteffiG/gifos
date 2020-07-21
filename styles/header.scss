@@ -1,0 +1,107 @@
+@import 'variables.scss';
+
+
+.init {
+  width: 100%;
+  height: 100px;
+  background: #572EE5;
+  padding-top: 5px;
+  .init-navigation {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+
+    .logo_img {
+      padding: 29px 0 17.2px 22px;
+    } 
+    
+    .menuToggle {
+      padding: 47px 27px 34px 0;
+      width: 100%;
+      height: 95px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: flex-end;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      background: #FFFFFF; 
+  }
+    
+    .iconToggle {
+      width: 15px;
+      height: 14px;
+      cursor: pointer;
+      z-index: 2;
+    }
+    
+    .iconToggle::after,
+    .iconToggle::before,
+    .iconToggle .line {
+      content: '';
+      border-radius: 3px;
+      display: block;
+      height: 2px;
+      margin: 3px 0;
+      transition: all .4s ease-in-out;
+      background: #572EE5;
+     }
+    
+    .menuInner {
+      margin: 0;
+      padding: 0;
+      padding-top: 17px;
+      width: 100%;
+      height: 100%;
+      top: 100px;
+      left: -100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      list-style: none;
+      background: rgba(87,46,229,0.90);
+      -webkit-transition: left 250ms ease-in-out;
+      transition: left .5s ease-in-out;
+      &_list, &_list4 {
+        font-family: $mont;
+        width: 100%;
+        text-align: center;
+      }
+      &_link {
+        font-size: 15px;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+        line-height: 60px; 
+      }
+    }
+      
+    .checkbox:checked ~ .menuToggle > .iconToggle:before {
+      transform: translateY(5px) rotate(135deg); 
+    }
+    
+    .checkbox:checked ~ .menuToggle > .iconToggle:after {
+      transform: translateY(-5px) rotate(-135deg); 
+    }
+    
+    .checkbox:checked ~ .menuToggle > .iconToggle .line {
+      transform: scale(0); 
+    }
+    
+    .checkbox {
+      display: none;
+    }
+    
+    .checkbox:checked ~ .menu > .menuInner {
+      left: 0;
+    }
+  }
+}
