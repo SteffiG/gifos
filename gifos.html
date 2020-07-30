@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFOS</title>
+    <title>MisGifos</title>
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -32,17 +32,28 @@
         </div>
     </header>
     <main>
-        <section class="container">
-            <h1 class="title">Inspírate, busca, guarda, y crea los mejores <span class="decoration-title">GIFOS</span></h1>
-            <img class="ilustration" src="./assets/ilustra_header.svg" alt="Ilustration title">
-            <!--Buscador-->
-            <input type="text" id="search" class="search" name="search" placeholder="Busca GIFOS y más">
-            <!--<i class="fas fa-search"></i>-->
-            <p class="paragraph">
-                <span class="special-text">Trending:</span>
-                </br>Reactions, Entertainment,
-                </br>Sports, Stickers, Artists
-            </p>
+        <section class="gifs">
+            <img class="gifs-logo" src="./assets/icon-mis-gifos.svg" alt="heart-favorites">
+            <p class="gifs-paragraph">Mis GIFOS</p>
+        </section>
+        <section class="view">
+            <div class="view-section_img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+            </div>
+            <div class="button">
+                <button class="button-more">VER MÁS</button>
+            </div>
         </section>
         <section class="gifos">
             <h2 class="gifos-title">Trending GIFOS</h2>
@@ -51,7 +62,7 @@
                 </br>GIFOS de nuestra comunidad.
             </p>
             <div class="card" id="sliderCards"></div>
-        </section>
+        </section>    
     </main>
     <footer class="end">
         <div class="end-content">
@@ -65,7 +76,5 @@
         </div>
     </footer>
     <script src="./scripts/main.js"></script>
-    <script src="./scripts/services.js"></script>
-
 </body>
 </html>

@@ -4,6 +4,7 @@
 }
 
 .gifos .gifos-title {
+  margin-top: 0;
   padding-top: 46px;
   padding-bottom: 7px;
   font-family: "Montserrat", sans-serif;
@@ -21,5 +22,22 @@
   line-height: 23px;
   padding-bottom: 32px;
   margin: 0;
+}
+
+.gifos .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.gifos .card .card-gif {
+  padding: 0 0 84px 22px;
 }
 /*# sourceMappingURL=gifos.css.map */

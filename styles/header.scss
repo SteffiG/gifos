@@ -13,7 +13,6 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
-
     .logo_img {
       padding: 29px 0 17.2px 22px;
     } 
@@ -75,13 +74,14 @@
         width: 100%;
         text-align: center;
       }
-      &_link {
+      &-link, &-link_style {
         font-size: 15px;
         font-weight: 700;
         text-decoration: none;
         color: white;
         line-height: 60px; 
       }
+
     }
       
     .checkbox:checked ~ .menuToggle > .iconToggle:before {

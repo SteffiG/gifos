@@ -1,0 +1,58 @@
+@import 'variables.scss';
+
+
+.gifs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .gifs-paragraph {
+        font-family: $mont;
+        font-weight: 700;
+        font-size: 20px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .view-section_img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .img-gif {
+            padding-bottom: 21px;
+        }
+    }
+    
+    .button {
+        .button-more {
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            border-radius: 25px;
+            font-family: $mont;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 18px 31.5px 16px 32.5px;
+            color: #572EE5;
+            letter-spacing: 0;
+            text-align: center;
+            background: white;
+        }
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .view {
+        .view-section_img {
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            .img-gif {
+                padding: 0 0 25px 21px;
+            }
+        }
+    }
+}

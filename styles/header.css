@@ -91,7 +91,7 @@
   text-align: center;
 }
 
-.init .init-navigation .menuInner_link {
+.init .init-navigation .menuInner-link, .init .init-navigation .menuInner-link_style {
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;

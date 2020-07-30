@@ -1,0 +1,81 @@
+.gifs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gifs .gifs-paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.view {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view .view-section_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.view .view-section_img .img-gif {
+  padding-bottom: 21px;
+}
+
+.view .button .button-more {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 18px 31.5px 16px 32.5px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  background: white;
+}
+
+@media screen and (min-width: 375px) {
+  .view .view-section_img {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .view .view-section_img .img-gif {
+    padding: 0 0 25px 21px;
+  }
+}
+/*# sourceMappingURL=gifs.css.map */

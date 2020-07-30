@@ -4,6 +4,7 @@
     background: #F3F5F8;
     margin: 0;
     .gifos-title {
+        margin-top: 0;
         padding-top: 46px;
         padding-bottom: 7px;
         font-family: $mont;
@@ -20,5 +21,14 @@
         line-height: 23px;
         padding-bottom: 32px;
         margin: 0;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        //padding: 0 0 84px 22px;
+        .card-gif {
+            padding: 0 0 84px 22px;
+        }
     }
 }
