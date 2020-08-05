@@ -1,0 +1,116 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@media screen and (min-width: 375px) {
+    .container{
+        .searchGif {
+            //width: 100%;
+            text-align: center;
+            flex-flow: row wrap;
+            justify-content: center;
+            &-img {
+                flex-grow: 1;   
+                width: 156px;
+                height: 120px;
+                margin: 0 10px 25px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .init {
+        width: 100%;
+        height: 100px;
+        background: #572EE5;
+        padding-top: 5px;
+        .init-navigation {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            .logo_mobile {
+                padding: 18px 0 12px 50px;
+            }
+            @include menu($margin: 0 50px 0 60px);
+            
+        }
+    }
+
+    .container {
+        .title {
+            font-size: 35px; 
+            text-align: center;
+            line-height: 50px;
+            width: 570px;
+            padding: 0;
+            margin: 76px 0 24px 0;
+        }
+        .ilustration {
+            width: 399px;
+        }
+        .search {
+            width: 551px;
+        }
+        .searchGif {   
+            &-img {   
+                max-width: 200px;
+                height: 150px;
+            }
+            /*&-img:hover {
+                background: rgba(87, 46, 229, 0.6);
+            }*/
+        }
+    }
+
+    .gifs {
+        .gifs-logo {
+            padding: 11px 0 8px 0;
+        }
+        .gifs-paragraph {
+            margin-bottom: 36px;
+        }
+    }
+    
+    .oscuro {
+        .init {
+            .menu {
+                background: #37383C;
+                .menuInner {
+                    background: #37383C;
+                    &-link, &-link_style {
+                        color: white;
+                    }
+                    .create {
+                        background:#37383C;
+                        border: 1px solid white;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .init {
+        width: 100%;
+        height: 100px;
+        background: #572EE5;
+        padding-top: 5px;
+        .init-navigation {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: white;
+            .logo_mobile {
+                padding: 18px 0 12px 156px;
+            }
+            @include menu();
+        }
+    }
+}

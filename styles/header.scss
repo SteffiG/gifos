@@ -13,9 +13,9 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: white;
-    .logo_img {
+    .logo_mobile {
       padding: 29px 0 17.2px 22px;
-    } 
+    }
     
     .menuToggle {
       padding: 47px 27px 34px 0;
@@ -69,10 +69,13 @@
       background: rgba(87,46,229,0.90);
       -webkit-transition: left 250ms ease-in-out;
       transition: left .5s ease-in-out;
-      &_list, &_list4 {
+      &_list{
         font-family: $mont;
         width: 100%;
         text-align: center;
+      }
+      .create {
+        display: none;
       }
       &-link, &-link_style {
         font-size: 15px;
@@ -81,7 +84,6 @@
         color: white;
         line-height: 60px; 
       }
-
     }
       
     .checkbox:checked ~ .menuToggle > .iconToggle:before {

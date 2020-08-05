@@ -11,6 +11,10 @@
           align-items: center;
 }
 
+.gifs .gifs-logo {
+  padding: 5px 0 7px 0;
+}
+
 .gifs .gifs-paragraph {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -18,6 +22,8 @@
   color: #572EE5;
   text-align: center;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 46px;
 }
 
 .view {
@@ -50,6 +56,10 @@
   padding-bottom: 21px;
 }
 
+.view .button {
+  padding: 57px 0 78px;
+}
+
 .view .button .button-more {
   border: 1px solid #572EE5;
   border-radius: 25px;
@@ -70,9 +80,9 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .view .view-section_img .img-gif {
     padding: 0 0 25px 21px;

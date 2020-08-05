@@ -1,0 +1,47 @@
+@import 'variables.scss';
+
+@mixin menu($margin: 0 156px 0 60px, $border: 1px solid #572EE5, $background: #FFFFFF, $color: #572EE5,) {
+    .menuToggle, 
+    .iconToggle,
+    .iconToggle::after,
+    .iconToggle::before,
+    .line {
+        display: none;
+    }
+    .menuInner {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        transition: none;
+        height: 80px;
+        background-color: $background;
+        font-family: $mont;
+        margin: 0;
+        padding: 0;
+        &_list {
+            font-family: $mont;
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-align: center;
+            width: auto;
+            padding-left: 50px;
+        }
+        &-link, &-link_style {
+            padding: 36px 0 38px 0;
+            font-size: 13px;
+            color: $color;
+            text-transform: uppercase;
+        }
+        .create {
+            display: inline-block;
+            background: $background;
+            padding: 19px;
+            border: $border;
+            border-radius: 50%;
+            margin: $margin;
+            padding-top: 18px;
+        }
+    }
+}

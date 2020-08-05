@@ -20,7 +20,7 @@
   background-color: white;
 }
 
-.init .init-navigation .logo_img {
+.init .init-navigation .logo_mobile {
   padding: 29px 0 17.2px 22px;
 }
 
@@ -85,10 +85,14 @@
   transition: left .5s ease-in-out;
 }
 
-.init .init-navigation .menuInner_list, .init .init-navigation .menuInner_list4 {
+.init .init-navigation .menuInner_list {
   font-family: "Montserrat", sans-serif;
   width: 100%;
   text-align: center;
+}
+
+.init .init-navigation .menuInner .create {
+  display: none;
 }
 
 .init .init-navigation .menuInner-link, .init .init-navigation .menuInner-link_style {

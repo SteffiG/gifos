@@ -1,0 +1,69 @@
+.creating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.creating .written {
+  padding: 134px 68px 128px;
+  border: 1px solid #572EE5;
+}
+
+.creating .written .text-creating {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 35px;
+  margin: 0;
+  margin-bottom: 3px;
+  width: 550px;
+}
+
+.creating .written .text-decoration {
+  color: #5ED7C6;
+}
+
+.creating .written .paragraph-creating {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  line-height: 29px;
+  margin: 0;
+}
+
+.creating .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.creating .options .circle {
+  border: 1px solid #572EE5;
+  border-radius: 50%;
+}
+
+.creating .options .circle .number {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+  padding: 6px 11ppx 6px 11px;
+}
+/*# sourceMappingURL=creating.css.map */

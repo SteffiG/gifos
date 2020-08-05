@@ -1,0 +1,49 @@
+@import 'variables.scss';
+
+.creating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .written {
+        padding: 134px 68px 128px;
+        border: 1px solid #572EE5;
+        .text-creating {
+            font-family: $mont;
+            font-weight: 700;
+            font-size: 25px;
+            color: #572EE5;
+            text-align: center; 
+            line-height: 35px;
+            margin: 0;
+            margin-bottom: 3px;
+            width: 550px;
+        }
+        .text-decoration {
+            color: #5ED7C6;
+        }
+        .paragraph-creating {
+            font-family: $robot; 
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            line-height: 29px;
+            margin: 0;
+        }
+    }
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .circle {
+            border: 1px solid #572EE5;
+            border-radius: 50%;
+            .number {
+                font-family: $robot;
+                font-size: 18px;
+                color: #572EE5;
+                text-align: center;
+                padding: 6px 11ppx 6px 11px;
+            }
+        }
+    }
+}

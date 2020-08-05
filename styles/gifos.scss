@@ -26,8 +26,11 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        overflow: auto;
         //padding: 0 0 84px 22px;
         .card-gif {
+            width: 243px;
+            height: 187px;
             padding: 0 0 84px 22px;
         }
     }

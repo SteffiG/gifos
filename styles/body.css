@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+}
+
+.oscuro .init {
+  background: #000000;
+}
+
+.oscuro .init .init-navigation {
+  background: #37383C;
+}
+
+.oscuro .init .init-navigation .menuToggle {
+  background: #37383C;
+}
+
+.oscuro .init .init-navigation .iconToggle::after,
+.oscuro .init .init-navigation .iconToggle::before,
+.oscuro .init .init-navigation .iconToggle .line {
+  background: white;
+}
+
+.oscuro .init .menu, .oscuro .init .menuInner {
+  background: #000000;
+}
+
+.oscuro .container, .oscuro .view, .oscuro .gifs {
+  background: #37383C;
+}
+
+.oscuro .container .title, .oscuro .view .title, .oscuro .gifs .title {
+  color: white;
+}
+
+.oscuro .container .paragraph, .oscuro .view .paragraph, .oscuro .gifs .paragraph {
+  color: white;
+}
+
+.oscuro .container .gifs-paragraph, .oscuro .view .gifs-paragraph, .oscuro .gifs .gifs-paragraph {
+  color: white;
+}
+
+.oscuro .container .search, .oscuro .view .search, .oscuro .gifs .search {
+  background: #37383C;
+  border: 1px solid white;
+}
+
+.oscuro .container .search-input, .oscuro .view .search-input, .oscuro .gifs .search-input {
+  background: #37383C;
+  color: white;
+}
+
+.oscuro .container .search-icon, .oscuro .view .search-icon, .oscuro .gifs .search-icon {
+  background: #37383C;
+}
+
+.oscuro .container .search-icon .fa-search, .oscuro .view .search-icon .fa-search, .oscuro .gifs .search-icon .fa-search {
+  color: white;
+}
+
+.oscuro .button .button-more {
+  background: #37383C;
+  color: white;
+  border: 1px solid white;
+}
+
+.oscuro .gifos {
+  background: #000000;
+}
+
+.oscuro .gifos .gifos-title, .oscuro .gifos .gifos-paragraph {
+  color: white;
+}
+
+.oscuro .end {
+  background: #000000;
+}
+
+.oscuro .end .end-content {
+  background: #37383C;
+}
+
+.oscuro .end .end-content .end-share, .oscuro .end .end-content .end-author {
+  color: white;
+}
+/*# sourceMappingURL=body.css.map */

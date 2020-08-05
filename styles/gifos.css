@@ -35,9 +35,12 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  overflow: auto;
 }
 
 .gifos .card .card-gif {
+  width: 243px;
+  height: 187px;
   padding: 0 0 84px 22px;
 }
 /*# sourceMappingURL=gifos.css.map */

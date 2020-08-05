@@ -4,57 +4,13 @@
 @import 'footer.scss';
 @import 'variables.scss';
 @import 'gifs.scss';
-
-body {
-    margin: 0;
-}
-
-
+@import 'body.scss';
+@import 'media.scss';
+@import 'mixins.scss';
+@import 'creating.scss';
 
 
 
 
 
-.oscuro {
-    .init {
-        background: #000000;
-        .init-navigation {
-            background: #37383C;
-            .menuToggle {
-                background: #37383C;
-            }
-            .iconToggle::after,
-            .iconToggle::before,
-            .iconToggle .line {
-                background: white;
-            }
-        }
-        .menu, .menuInner {
-          background: #000000;
-        }
-    }
-    .container {
-        background: #37383C;
-        .title {
-            color: white;
-        }
-        .paragraph {
-            color: white;
-        }
-    }
-    .gifos {
-        background: #000000;
-        .gifos-title, .gifos-paragraph {
-            color: white;
-        }
-    }
-    .end {
-        background: #000000;
-        .end-content {
-            background: #37383C;
-            .end-share, .end-author {
-                color: white;
-            }
-        }
-    }
-}
+

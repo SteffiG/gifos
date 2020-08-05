@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+}
+
+.oscuro {
+    .init {
+        background: #000000;
+        .init-navigation {
+            background: #37383C;
+            .menuToggle {
+                background: #37383C;
+            }
+            .iconToggle::after,
+            .iconToggle::before,
+            .iconToggle .line {
+                background: white;
+            }
+        }
+        .menu, .menuInner {
+          background: #000000;
+        }
+    }
+    .container, .view, .gifs {
+        background: #37383C;
+        .title {
+            color: white;
+        }
+        .paragraph {
+            color: white;
+        }
+        .gifs-paragraph {
+            color: white;
+        }
+        .search {
+            background: #37383C;
+            border: 1px solid white;
+            &-input  {
+                background: #37383C;
+                color: white;
+            }
+            &-icon {
+                background: #37383C;
+                .fa-search {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .button {
+        .button-more {
+            background: #37383C;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+    .gifos {
+        background: #000000;
+        .gifos-title, .gifos-paragraph {
+            color: white;
+        }
+    }
+    .end {
+        background: #000000;
+        .end-content {
+            background: #37383C;
+            .end-share, .end-author {
+                color: white;
+            }
+        }
+    }
+}
