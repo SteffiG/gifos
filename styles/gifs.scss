@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    .view-section_img {
+    &-section_img {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -35,7 +35,7 @@
     
     .button {
         padding: 57px 0 78px;
-        .button-more {
+        &-more {
             border: 1px solid #572EE5;
             border-radius: 25px;
             border-radius: 25px;
@@ -53,7 +53,7 @@
 
 @media screen and (min-width: 375px) {
     .view {
-        .view-section_img {
+        &-section_img {
             flex-flow: row wrap;
             justify-content: center;
             .img-gif {

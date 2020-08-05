@@ -3,7 +3,7 @@
   background: #572EE5;
 }
 
-.end .end-content {
+.end-content {
   padding: 47px 0 23px 0;
   background: white;
   font-family: "Roboto", sans-serif;
@@ -21,12 +21,12 @@
           align-items: center;
 }
 
-.end .end-content .end-share {
+.end-content .info .end-share {
   margin: 0;
   margin-bottom: 24px;
 }
 
-.end .end-content .end-icons {
+.end-content .info .end-icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,20 +39,20 @@
           justify-content: center;
 }
 
-.end .end-content .end-icons .end-link {
+.end-content .info .end-icons .end-link {
   color: #CDD6E0;
 }
 
-.end .end-content .end-icons .end-link .fab {
+.end-content .info .end-icons .end-link .fab {
   width: 18px;
   height: 16.2;
 }
 
-.end .end-content .end-icons .end-link .fa-twitter {
+.end-content .info .end-icons .end-link .fa-twitter {
   padding: 0 19px 47.8px 19px;
 }
 
-.end .end-content .end-author {
+.end-content .end-author {
   font-size: 14px;
   line-height: 20px;
   margin: 0;

@@ -3,7 +3,7 @@
 .end {
     height: 201px;
     background: #572EE5;
-    .end-content {
+    &-content {
         padding: 47px 0 23px 0;
         background: white;
         font-family: $robot;
@@ -12,22 +12,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        .end-share {
-            margin: 0;
-            margin-bottom: 24px;
-        }
-        .end-icons {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            .end-link {
-                color: #CDD6E0;
-                .fab {
-                    width: 18px;
-                    height: 16.2;
-                }
-                .fa-twitter {
-                    padding: 0 19px 47.8px 19px;
+        .info{
+            .end-share {
+                margin: 0;
+                margin-bottom: 24px;
+            }
+            .end-icons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .end-link {
+                    color: #CDD6E0;
+                    .fab {
+                        width: 18px;
+                        height: 16.2;
+                    }
+                    .fa-twitter {
+                        padding: 0 19px 47.8px 19px;
+                    }
                 }
             }
         }

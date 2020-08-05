@@ -1,27 +1,13 @@
+@import 'mixins.scss';
+
 body {
     margin: 0;
 }
 
 .oscuro {
-    .init {
-        background: #000000;
-        .init-navigation {
-            background: #37383C;
-            .menuToggle {
-                background: #37383C;
-            }
-            .iconToggle::after,
-            .iconToggle::before,
-            .iconToggle .line {
-                background: white;
-            }
-        }
-        .menu, .menuInner {
-          background: #000000;
-        }
-    }
-    .container, .view, .gifs {
-        background: #37383C;
+    background: #37383C;
+    @include header();
+    .container {
         .title {
             color: white;
         }
@@ -46,14 +32,23 @@ body {
             }
         }
     }
+    .oscuro {
+        @include header();
 
-    .button {
-        .button-more {
+    }
+    .view {
+        &-section_img {
             background: #37383C;
-            color: white;
-            border: 1px solid white;
+        }
+        .button {
+            .button-more {
+                background: #37383C;
+                color: white;
+                border: 1px solid white;
+            }
         }
     }
+
     .gifos {
         background: #000000;
         .gifos-title, .gifos-paragraph {

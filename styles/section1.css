@@ -52,7 +52,7 @@
   border-radius: 27px;
 }
 
-.container .search .search-input {
+.container .search-input {
   left: 2em;
   height: 2.5em;
   font-family: "Roboto", sans-serif;
@@ -64,7 +64,7 @@
   outline-color: aqua;
 }
 
-.container .search .search-icon {
+.container .search-icon {
   margin-left: auto;
   margin-right: 1em;
   background-color: white;
@@ -72,7 +72,7 @@
   outline-color: aqua;
 }
 
-.container .search .search-icon .fa-search {
+.container .search-icon .fa-search {
   width: 20px;
   height: 20px;
   color: #572EE5;

@@ -2,21 +2,25 @@ body {
   margin: 0;
 }
 
+.oscuro {
+  background: #37383C;
+}
+
 .oscuro .init {
   background: #000000;
 }
 
-.oscuro .init .init-navigation {
+.oscuro .init-navigation {
   background: #37383C;
 }
 
-.oscuro .init .init-navigation .menuToggle {
+.oscuro .init-navigation .menuToggle {
   background: #37383C;
 }
 
-.oscuro .init .init-navigation .iconToggle::after,
-.oscuro .init .init-navigation .iconToggle::before,
-.oscuro .init .init-navigation .iconToggle .line {
+.oscuro .init-navigation .iconToggle::after,
+.oscuro .init-navigation .iconToggle::before,
+.oscuro .init-navigation .iconToggle .line {
   background: white;
 }
 
@@ -24,41 +28,63 @@ body {
   background: #000000;
 }
 
-.oscuro .container, .oscuro .view, .oscuro .gifs {
-  background: #37383C;
-}
-
-.oscuro .container .title, .oscuro .view .title, .oscuro .gifs .title {
+.oscuro .container .title {
   color: white;
 }
 
-.oscuro .container .paragraph, .oscuro .view .paragraph, .oscuro .gifs .paragraph {
+.oscuro .container .paragraph {
   color: white;
 }
 
-.oscuro .container .gifs-paragraph, .oscuro .view .gifs-paragraph, .oscuro .gifs .gifs-paragraph {
+.oscuro .container .gifs-paragraph {
   color: white;
 }
 
-.oscuro .container .search, .oscuro .view .search, .oscuro .gifs .search {
+.oscuro .container .search {
   background: #37383C;
   border: 1px solid white;
 }
 
-.oscuro .container .search-input, .oscuro .view .search-input, .oscuro .gifs .search-input {
+.oscuro .container .search-input {
   background: #37383C;
   color: white;
 }
 
-.oscuro .container .search-icon, .oscuro .view .search-icon, .oscuro .gifs .search-icon {
+.oscuro .container .search-icon {
   background: #37383C;
 }
 
-.oscuro .container .search-icon .fa-search, .oscuro .view .search-icon .fa-search, .oscuro .gifs .search-icon .fa-search {
+.oscuro .container .search-icon .fa-search {
   color: white;
 }
 
-.oscuro .button .button-more {
+.oscuro .oscuro .init {
+  background: #000000;
+}
+
+.oscuro .oscuro .init-navigation {
+  background: #37383C;
+}
+
+.oscuro .oscuro .init-navigation .menuToggle {
+  background: #37383C;
+}
+
+.oscuro .oscuro .init-navigation .iconToggle::after,
+.oscuro .oscuro .init-navigation .iconToggle::before,
+.oscuro .oscuro .init-navigation .iconToggle .line {
+  background: white;
+}
+
+.oscuro .oscuro .init .menu, .oscuro .oscuro .init .menuInner {
+  background: #000000;
+}
+
+.oscuro .view-section_img {
+  background: #37383C;
+}
+
+.oscuro .view .button .button-more {
   background: #37383C;
   color: white;
   border: 1px solid white;

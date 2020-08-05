@@ -45,3 +45,45 @@
         }
     }
 }
+
+@mixin header() {
+    .init {
+        background: #000000;
+        &-navigation {
+            background: #37383C;
+            .menuToggle {
+                background: #37383C;
+            }
+            .iconToggle::after,
+            .iconToggle::before,
+            .iconToggle .line {
+                background: white;
+            }
+        }
+        .menu, .menuInner {
+          background: #000000;
+        }
+    }
+}
+
+@mixin header-desktop() {
+    .init {
+        &-navigation {
+            background: #37383C;
+            .menu {
+                background: #37383C;
+                .menuInner {
+                    background: #37383C;
+                    &-link, &-link_style {
+                        color: white;
+                    }
+                    .create {
+                        background:#37383C;
+                        border: 1px solid white;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }   
+}
