@@ -41,21 +41,29 @@ body {
 }
 
 .oscuro .container .search {
-  background: #37383C;
+  background-color: #37383C;
   border: 1px solid white;
 }
 
-.oscuro .container .search-input {
+.oscuro .container .search-container {
+  background: #37383C;
+}
+
+.oscuro .container .search-container .search-input {
   background: #37383C;
   color: white;
 }
 
-.oscuro .container .search-icon {
+.oscuro .container .search-container .search-icon {
   background: #37383C;
 }
 
-.oscuro .container .search-icon .fa-search {
+.oscuro .container .search-container .search-icon .fa-search {
   color: white;
+}
+
+.oscuro .container .search .search-autocomplete_list {
+  background-color: #37383C;
 }
 
 .oscuro .oscuro .init {

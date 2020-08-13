@@ -36,8 +36,16 @@
             <img class="ilustration" src="./assets/ilustra_header.svg" alt="Ilustration title">
             <!--Buscador-->
             <div class="search">
-                <input type="text" class="search-input" name="search" placeholder="Busca GIFOS y más">
-                <button class="search-icon"><i class="fas fa-search"></i></button>
+                <div class="search-container">
+                    <input type="text" class="search-input" name="search" id="myInput" placeholder="Busca GIFOS y más">
+                    <button class="search-icon"><i class="fas fa-search"></i></button>
+                </div> 
+                <ul class="search-autocomplete_list">
+                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 1</a></li>
+                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 2</a></li>
+                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 3</a></li>
+                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 4</a></li>
+                </ul>
             </div>
             <p class="paragraph">
                 <span class="special-text">Trending:</span>
@@ -46,6 +54,9 @@
             </p>
             <div class="searchGif">
                 <p class="searchName"></p>
+            </div>
+            <div class="button">
+                <button class="button-more">VER MÁS</button>
             </div>
         </section>
         <section class="gifos">

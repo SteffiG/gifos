@@ -78,6 +78,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+  z-index: 1;
   list-style: none;
   background: rgba(87, 46, 229, 0.9);
   -webkit-transition: left 250ms ease-in-out;
@@ -89,6 +90,16 @@
   font-family: "Montserrat", sans-serif;
   width: 100%;
   text-align: center;
+}
+
+.init-navigation .menuInner-list::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  border-bottom: 1px solid white;
+  bottom: 0;
+  width: 50%;
+  left: 25%;
 }
 
 .init-navigation .menuInner .create {

@@ -18,17 +18,23 @@ body {
             color: white;
         }
         .search {
-            background: #37383C;
+            background-color: #37383C;
             border: 1px solid white;
-            &-input  {
+            &-container {
                 background: #37383C;
-                color: white;
-            }
-            &-icon {
-                background: #37383C;
-                .fa-search {
+                .search-input  {
+                    background: #37383C;
                     color: white;
                 }
+                .search-icon {
+                    background: #37383C;
+                    .fa-search {
+                        color: white;
+                    }
+                }
+            }
+            .search-autocomplete_list{
+                background-color: #37383C;
             }
         }
     }
