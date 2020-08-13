@@ -7,6 +7,7 @@ body {
 .oscuro {
     background: #37383C;
     @include header();
+    //SECTION 1 - PAGINA PRINCIPAL
     .container {
         .title {
             color: white;
@@ -38,9 +39,12 @@ body {
             }
         }
     }
-    .oscuro {
-        @include header();
-
+    //FAVORITOS&GIFOS - SEGUNDA&TERCERA PAGINA
+    
+    .gifs {
+        &-paragraph {
+            color: white;
+        }
     }
     .view {
         &-section_img {
@@ -55,12 +59,65 @@ body {
         }
     }
 
+    //CREAR GIFOS - CUARTA PAGINA
+    .creating {
+        &__cam {
+            &--day {
+                display: none;
+            }
+            &--night {
+                display: inline;
+            }
+        }
+        &__written {
+            border: 1px solid white;
+            &--title {
+                color: white;
+            }
+            &--paragraph {
+                color: white;
+            }
+        }
+        &__options {
+            &--circle {
+                border:1px solid white;
+                &--number {
+                    color: white;
+                }
+            }
+        }
+        &__film {
+            &--day {
+                display: none;
+            }
+            &--night {
+                display: inline;
+                padding-bottom: 1em;
+            }
+        }
+        &__written::before {
+            background-color: white;
+        }
+        &__button {
+            &--start {
+                border: 1px solid white;
+                color: white;
+                background: #37383C;
+            }
+        }
+    }
+
+    //TRENDING
+
     .gifos {
         background: #000000;
         .gifos-title, .gifos-paragraph {
             color: white;
         }
     }
+
+    //FOOTER
+
     .end {
         background: #000000;
         .end-content {

@@ -25,6 +25,7 @@
                     <li class="menuInner_list"> <a class="menuInner-link_style" href="#">Modo Nocturno</a></li>
                     <li class="menuInner_list"> <a class="menuInner-link" href="./favorites.html">Favoritos</a></li>
                     <li class="menuInner_list"> <a class="menuInner-link" href="./gifos.html">Mis GIFOS</a></li>
+                    <li class="menuInner_list"> <a class="menuInner-link" href="./creategif.html">Crear GIFOS</a></li>
                     <li><a href="./creategif.html"><img class="create" src="./assets/button-crear-gifo.svg" alt="create gif"></a></li>
                 </ul>
             </nav>
@@ -32,27 +33,36 @@
     </header>
     <main>
         <section class="creating">
-            <img src="./assets/camara.svg" alt="camara">
-            <!--<img src="./assets/camara-modo-noc.svg" alt="camara-noturno">-->
-            <img src="./assets/element-luz-camara.svg" alt="luz-camara">
-            <div class="written">
-                <h2 class="text-creating">Aquí podrás </br> crear tus propios <span class="text-decoration">GIFOS</span></h2>
-                <p class="paragraph-creating">¡Crea tu GIFO en sólo 3 pasos!</p>
-                <p class="paragraph-creating">(sólo necesitas una cámara para grabar un video)</p>
+            <div class="creating__cam">
+                <img class="creating__cam--day" src="./assets/camara.svg" alt="camara">
+                <img class="creating__cam--night" src="./assets/camara-modo-noc.svg" alt="camara-noturno">
+                <img class="creating__cam--light"  src="./assets/element-luz-camara.svg" alt="luz-camara">
             </div>
-            <div class="options">
-                <div class="circle">
-                    <p class="circle-number">1</p>
+            <div class="creating__written">
+                <h2 class="creating__written--title">Aquí podrás </br> crear tus propios <span class="creating__written--titleDecoration">GIFOS</span></h2>
+                <p class="creating__written--paragraph">¡Crea tu GIFO en sólo 3 pasos!
+                    <br/>(sólo necesitas una cámara para grabar un video)
+                </p>
+                <!--<p class="creating__written--paragraph">(sólo necesitas una cámara para grabar un video)</p>-->
+            </div>
+            <div class="creating__options">
+                <div class="creating__options--circle">
+                    <p class="creating__options--circle--number">1</p>
                 </div>
-                <div class="circle">
-                    <p class="circle-number">2</p>
+                <div class="creating__options--circle">
+                    <p class="creating__options--circle--number">2</p>
                 </div>
-                <div class="circle">
-                    <p class="circle-number">3</p>
+                <div class="creating__options--circle">
+                    <p class="creating__options--circle--number">3</p>
                </div>
             </div>
-            <img src="./assets/pelicula.svg" alt="pelicula">
-            <!--<img src="./assets/pelicula-modo-noc.svg" alt="pelicula-nocturno">-->
+            <div class="creating__film">
+                <img src="./assets/pelicula.svg" alt="pelicula" class="creating__film--day">
+                <img src="./assets/pelicula-modo-noc.svg" alt="pelicula-nocturno" class="creating__film--night">
+            </div>
+            <div class="creating__button">
+                <button class="creating__button--start">COMENZAR</button>
+            </div>
         </section>
         <section class="gifos">
             <h2 class="gifos-title">Trending GIFOS</h2>
@@ -61,19 +71,21 @@
                 <br/>GIFOS de nuestra comunidad.
             </p>
             <div class="card" id="sliderCards"></div>
-        </section>    
+        </section>   
     </main>
     <footer class="end">
         <div class="end-content">
-            <p class="end-share">Compartir en:</p>
-            <div class="end-icons">
-                <a href="https://www.facebook.com" target="blanck" class="end-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="blanck" class="end-link"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com" target="blanck" class="end-link"><i class="fab fa-instagram"></i></a>
+            <div class="info">
+                <p class="end-share">Compartir en:</p>
+                <div class="end-icons">
+                    <a href="https://www.facebook.com" target="blanck" class="end-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="blanck" class="end-link"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" target="blanck" class="end-link"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
             <p class="end-author">© GIFOS 2020 All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="./scripts/main.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

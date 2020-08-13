@@ -95,7 +95,7 @@
 .init-navigation .menuInner-list::after {
   content: "";
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   border-bottom: 1px solid white;
   bottom: 0;
   width: 50%;

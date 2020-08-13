@@ -37,6 +37,22 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /*.button {
+        padding: 57px 0 78px;
+        &-more {
+            border: 1px solid #572EE5;
+            border-radius: 25px;
+            border-radius: 25px;
+            font-family: $mont;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 18px 31.5px 16px 32.5px;
+            color: #572EE5;
+            letter-spacing: 0;
+            text-align: center;
+            background: white;
+        }
+    }*/
 }
 
 .view-section_img {

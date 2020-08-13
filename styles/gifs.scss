@@ -1,5 +1,5 @@
 @import 'variables.scss';
-
+@import 'mixins.scss';
 
 .gifs {
     display: flex;
@@ -33,7 +33,9 @@
         }
     }
     
-    .button {
+    @include btn();
+
+    /*.button {
         padding: 57px 0 78px;
         &-more {
             border: 1px solid #572EE5;
@@ -48,7 +50,7 @@
             text-align: center;
             background: white;
         }
-    }
+    }*/
 }
 
 @media screen and (min-width: 375px) {

@@ -2,6 +2,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.creating__cam {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -9,39 +22,54 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 1em;
 }
 
-.creating .written {
-  padding: 134px 68px 128px;
+.creating__cam--night {
+  display: none;
+}
+
+.creating__written {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
   border: 1px solid #572EE5;
 }
 
-.creating .written .text-creating {
+.creating__written--title {
+  padding: 1em;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 20px;
   color: #572EE5;
   text-align: center;
   line-height: 35px;
-  margin: 0;
-  margin-bottom: 3px;
-  width: 550px;
+  margin-bottom: 1em;
 }
 
-.creating .written .text-decoration {
+.creating__written--titleDecoration {
   color: #5ED7C6;
 }
 
-.creating .written .paragraph-creating {
+.creating__written--paragraph {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   color: #000000;
   text-align: center;
-  line-height: 29px;
+  line-height: 20px;
   margin: 0;
+  padding-bottom: 1em;
 }
 
-.creating .options {
+.creating__options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,16 +82,107 @@
           justify-content: center;
 }
 
-.creating .options .circle {
+.creating__options--circle {
+  margin: 10px;
   border: 1px solid #572EE5;
   border-radius: 50%;
+  padding: 6px 10px;
 }
 
-.creating .options .circle .number {
+.creating__options--circle--number {
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
+  font-size: 13px;
   color: #572EE5;
   text-align: center;
-  padding: 6px 11ppx 6px 11px;
+  margin: 0;
 }
+
+.creating__film {
+  position: relative;
+  margin: 1em;
+}
+
+.creating__film--day {
+  padding-bottom: 1em;
+}
+
+.creating__film--night {
+  display: none;
+}
+
+.creating__written::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  top: 94%;
+  height: 7px;
+  background-color: #572EE5;
+  bottom: 0;
+}
+
+.creating__button {
+  padding: 20px 0;
+}
+
+.creating__button--start {
+  border: 1px solid #572EE5;
+  border-radius: 25px;
+  border-radius: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 18px 31.5px 16px 32.5px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  background: white;
+}
+
+/*.creating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .written {
+        padding: 134px 68px 128px;
+        border: 1px solid #572EE5;
+        .text-creating {
+            font-family: $mont;
+            font-weight: 700;
+            font-size: 25px;
+            color: #572EE5;
+            text-align: center; 
+            line-height: 35px;
+            margin: 0;
+            margin-bottom: 3px;
+            width: 550px;
+        }
+        .text-decoration {
+            color: #5ED7C6;
+        }
+        .paragraph-creating {
+            font-family: $robot; 
+            font-size: 16px;
+            color: #000000;
+            text-align: center;
+            line-height: 29px;
+            margin: 0;
+        }
+    }
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .circle {
+            border: 1px solid #572EE5;
+            border-radius: 50%;
+            .number {
+                font-family: $robot;
+                font-size: 18px;
+                color: #572EE5;
+                text-align: center;
+                padding: 6px 11ppx 6px 11px;
+            }
+        }
+    }
+}*/
 /*# sourceMappingURL=creating.css.map */
