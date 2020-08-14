@@ -100,6 +100,77 @@
 }
 
 
+@media screen and (min-width: 375px) {
+    .creating {
+        &__written::before {
+            top: 86%;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .creating {
+        display: grid;
+        grid-template-columns: 220px 1fr 220px;
+        grid-template-rows: 390px 67px 97px;
+        justify-content: center;
+        grid-template-areas: "cam written ." ". options film" ". btn .";
+        &__cam {
+            grid-area: cam;
+            justify-self: end;
+        }
+        &__written {
+            grid-area: written;
+            margin-top: 4px;
+            width: 100%;
+            max-width: 688px;
+            height: 386px;
+            justify-self: center;
+            &--title {
+                padding: 134px 68px 3px 70px;
+                font-size: 25px;
+                margin: 0;
+            }
+            &--paragraph {
+                font-size: 16px;
+                
+            }
+        }
+        &__options {
+            grid-area: options;
+        }
+        &__film {
+            grid-area: film;
+        }
+        &__button {
+            grid-area: btn;
+            justify-self: center;
+        }
+        &__written::before {
+            top: 73%;
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .creating {
+        grid-template-columns: 220px 688px 220px;
+        &__written::before {
+            width: 55%;
+        }
+        &__film {
+            justify-self: end;
+        }
+        &__button {
+            justify-self: center;
+        }
+    }
+}
+
+
+
+
 /*.creating {
     display: flex;
     flex-direction: row;
