@@ -1,5 +1,5 @@
 @import 'variables.scss';
-
+@import 'media.scss';
 
 .creating {
     display: flex;
@@ -56,6 +56,7 @@
                 font-family: $robot;
                 font-size: 13px;
                 color: #572EE5;
+                font-weight: 500;
                 text-align: center;
                 margin: 0;
             }
@@ -98,123 +99,3 @@
         }
     }
 }
-
-
-@media screen and (min-width: 375px) {
-    .creating {
-        &__written::before {
-            top: 86%;
-        }
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .creating {
-        display: grid;
-        grid-template-columns: 220px 1fr 220px;
-        grid-template-rows: 390px 67px 97px;
-        justify-content: center;
-        grid-template-areas: "cam written ." ". options film" ". btn .";
-        &__cam {
-            grid-area: cam;
-            justify-self: end;
-        }
-        &__written {
-            grid-area: written;
-            margin-top: 4px;
-            width: 100%;
-            max-width: 688px;
-            height: 386px;
-            justify-self: center;
-            &--title {
-                padding: 134px 68px 3px 70px;
-                font-size: 25px;
-                margin: 0;
-            }
-            &--paragraph {
-                font-size: 16px;
-                
-            }
-        }
-        &__options {
-            grid-area: options;
-        }
-        &__film {
-            grid-area: film;
-        }
-        &__button {
-            grid-area: btn;
-            justify-self: center;
-        }
-        &__written::before {
-            top: 73%;
-            width: 60%;
-        }
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .creating {
-        grid-template-columns: 220px 688px 220px;
-        &__written::before {
-            width: 55%;
-        }
-        &__film {
-            justify-self: end;
-        }
-        &__button {
-            justify-self: center;
-        }
-    }
-}
-
-
-
-
-/*.creating {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    .written {
-        padding: 134px 68px 128px;
-        border: 1px solid #572EE5;
-        .text-creating {
-            font-family: $mont;
-            font-weight: 700;
-            font-size: 25px;
-            color: #572EE5;
-            text-align: center; 
-            line-height: 35px;
-            margin: 0;
-            margin-bottom: 3px;
-            width: 550px;
-        }
-        .text-decoration {
-            color: #5ED7C6;
-        }
-        .paragraph-creating {
-            font-family: $robot; 
-            font-size: 16px;
-            color: #000000;
-            text-align: center;
-            line-height: 29px;
-            margin: 0;
-        }
-    }
-    .options {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        .circle {
-            border: 1px solid #572EE5;
-            border-radius: 50%;
-            .number {
-                font-family: $robot;
-                font-size: 18px;
-                color: #572EE5;
-                text-align: center;
-                padding: 6px 11ppx 6px 11px;
-            }
-        }
-    }
-}*/

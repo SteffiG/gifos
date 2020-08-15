@@ -106,7 +106,7 @@
   display: none;
 }
 
-.init-navigation .menuInner-link, .init-navigation .menuInner-link_style {
+.init-navigation .menuInner-link, .init-navigation .menuInner-link_style, .init-navigation .menuInner-linkCreate {
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;

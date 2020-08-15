@@ -77,9 +77,11 @@ function search(value) {
     })
     .then((json) => {
         let imagesGif = json.data;
+        console.log("hola");
         let containerGif = document.querySelector('.searchGif');
         containerGif.innerHTML = '';
         for(let i = 0 ; i < imagesGif.length; i++ ){
+            console.log("aqui");
             let node = document.createElement('img');
             node.src = imagesGif[i].images.downsized.url;
             node.className = 'searchGif-img';
@@ -97,7 +99,7 @@ function search(value) {
  * @return {}
  */
 
-function getAutoComplete() {
+function getAutocomplete() {
     let that = this;
     const URL = `https://api.giphy.com/v1/gifs/search/tags?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs&q=${this.value}`;
     fetch(URL)
@@ -105,22 +107,16 @@ function getAutoComplete() {
         return response.json();
     }) 
     .then((json) => {
-        console.log(json);
         let a, b, i, val = that.value;
         let arr = json.data;
-        console.log(arr);
-        //Agregamos como child del input lo que devuelve el api
         /*create a DIV element that will contain the items (values):*/
         a = document.createElement("DIV");
-        a.setAttribute("id", that.id + "autocomplete-list");
+        a.setAttribute("id", that.id + "autocomplete_list");
         a.setAttribute("class", "autocomplete-items");
         /*append the DIV element as a child of the autocomplete container:*/
         that.parentNode.appendChild(a);
         /*for each item in the array...*/
         for ( i = 0; i < arr.length; i++) {
-            console.log(arr[i]);
-            /*check if the item starts with the same letters as the text field value:*/
-            if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
             /*create a DIV element for each matching element:*/
             b = document.createElement("DIV");
             /*make the matching letters bold:*/
@@ -130,15 +126,13 @@ function getAutoComplete() {
             b.innerHTML += "<input type='hidden' value='" + arr[i].name + "'>";
             /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function(e) {
+                console.log("llegoooo");
                 search(this.getElementsByTagName("input")[0].value);
                 that.value = this.getElementsByTagName("input")[0].value;
-                /*insert the value for the autocomplete text field:*/
-                /*close the list of autocompleted values,
-                (or any other open lists of autocompleted values:*/
+                console.log(that.value);
                 closeAllLists(that);
             });
             a.appendChild(b);
-            }
         }
     }).catch((error) => {return error})
 }
@@ -162,5 +156,5 @@ function closeAllLists(elmnt) {
  * Listener
  */
 blackout.addEventListener("click", changeMode);
-searchGif.addEventListener('input', getAutoComplete);
+searchGif.addEventListener('input', getAutocomplete);
 wordTrending.addEventListener('change', trendingSearch);

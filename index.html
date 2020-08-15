@@ -1,87 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIFOS</title>
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7facdea3f4.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="init">
-        <div class="init-navigation">
-            <a href="./index.html"><img class="logo_mobile" src="./assets/logo-mobile.svg" alt="logo"></a>
-            <input type="checkbox" id="checkbox" class="checkbox">
-            <div class="menuToggle"> 
-                <label class="iconToggle" for="checkbox">
-                    <span class="line"></span>
-                </label>
-            </div>
-            <nav class="menu">
-                <ul class="menuInner">
-                    <li class="menuInner_list"> <a class="menuInner-link_style" href="#">Modo Nocturno</a></li>
-                    <li class="menuInner_list"> <a class="menuInner-link" href="./favorites.html">Favoritos</a></li>
-                    <li class="menuInner_list"> <a class="menuInner-link" href="./gifos.html">Mis GIFOS</a></li>
-                    <li class="menuInner_list"> <a class="menuInner-link" href="./creategif.html">Crear GIFOS</a></li>
-                    <li><a href="./creategif.html"><img class="create" src="./assets/button-crear-gifo.svg" alt="create gif"></a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="container">
-            <h1 class="title">Inspírate, busca, guarda, y crea los mejores <span class="decoration-title">GIFOS</span></h1>
-            <img class="ilustration" src="./assets/ilustra_header.svg" alt="Ilustration title">
-            <!--Buscador-->
-            <div class="search">
-                <div class="search-container">
-                    <input type="text" class="search-input" name="search" id="myInput" placeholder="Busca GIFOS y más">
-                    <button class="search-icon"><i class="fas fa-search"></i></button>
-                </div> 
-                <ul class="search-autocomplete_list">
-                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 1</a></li>
-                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 2</a></li>
-                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 3</a></li>
-                    <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 4</a></li>
-                </ul>
-            </div>
-            <p class="paragraph">
-                <span class="special-text">Trending:</span>
-                <br/>Reactions, Entertainment,
-                <br/>Sports, Stickers, Artists
-            </p>
-            <div class="searchGif">
-                <p class="searchName"></p>
-            </div>
-            <div class="button">
-                <button class="button-more">VER MÁS</button>
-            </div>
-        </section>
-        <section class="gifos">
-            <h2 class="gifos-title">Trending GIFOS</h2>
-            <p class="gifos-paragraph">
-                Mira los últimos 
-                <br/>GIFOS de nuestra comunidad.
-            </p>
-            <div class="card"></div>
-        </section>
-    </main>
-    <footer class="end">
-        <div class="end-content">
-            <div class="info">
-                <p class="end-share">Compartir en:</p>
-                <div class="end-icons">
-                    <a href="https://www.facebook.com" target="blanck" class="end-link"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="blanck" class="end-link"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="blanck" class="end-link"><i class="fab fa-instagram"></i></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GIFOS</title>
+        <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/7facdea3f4.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header class="init">
+            <div class="init-navigation">
+                <a href="./index.html"><img class="logo_mobile" src="./assets/logo-mobile.svg" alt="logo"></a>
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <div class="menuToggle"> 
+                    <label class="iconToggle" for="checkbox">
+                        <span class="line"></span>
+                    </label>
                 </div>
+                <nav class="menu">
+                    <ul class="menuInner">
+                        <li class="menuInner_list"> <a class="menuInner-link_style" href="#">Modo Nocturno</a></li>
+                        <li class="menuInner_list"> <a class="menuInner-link" href="./favorites.html">Favoritos</a></li>
+                        <li class="menuInner_list"> <a class="menuInner-link" href="./gifos.html">Mis GIFOS</a></li>
+                        <li class="menuInner_list"> <a class="menuInner-linkCreate" href="./creategif.html">Crear GIFOS</a></li>
+                        <li><a href="./creategif.html"><img class="create" src="./assets/button-crear-gifo.svg" alt="create gif"></a></li>
+                    </ul>
+                </nav>
             </div>
-            <p class="end-author">© GIFOS 2020 All Rights Reserved.</p>
-        </div>
-    </footer>
-    <script type="module" src="./scripts/main.js"></script>
-</body>
+        </header>
+        <main>
+            <section class="container">
+                <h1 class="title">Inspírate, busca, guarda, y crea los mejores <span class="decoration-title">GIFOS</span></h1>
+                <img class="ilustration" src="./assets/ilustra_header.svg" alt="Ilustration title">
+                <!--Buscador-->
+                <div class="search">
+                    <div class="search-container">
+                        <input type="text" class="search-input" name="search" id="myInput" placeholder="Busca GIFOS y más">
+                        <button class="search-icon"><i class="fas fa-search"></i></button>
+                    </div> 
+                    <ul class="search-autocomplete_list">
+                        <li class="search-autocomplete_items">
+                            <a class="autocomplete-selected">
+                                <i class="fas fa-search"></i> 
+                                Sugerencia 1
+                            </a>
+                        </li>
+                        <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 2</a></li>
+                        <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 3</a></li>
+                        <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i> Sugerencia 4</a></li>
+                    </ul>
+                </div>
+                <p class="paragraph">
+                    <span class="special-text">Trending:</span>
+                    <br/>Reactions, Entertainment,
+                    <br/>Sports, Stickers, Artists
+                </p>
+                <div class="searchGif">
+                    <p class="searchName"></p>
+                </div>
+                <div class="button">
+                    <button class="button-more">VER MÁS</button>
+                </div>
+            </section>
+            <section class="gifos">
+                <h2 class="gifos-title">Trending GIFOS</h2>
+                <p class="gifos-paragraph">
+                    Mira los últimos 
+                    <br/>GIFOS de nuestra comunidad.
+                </p>
+                <div class="card"></div>
+            </section>
+        </main>
+        <footer class="end">
+            <div class="end-content">
+                <div class="info">
+                    <p class="end-share">Compartir en:</p>
+                    <div class="end-icons">
+                        <a href="https://www.facebook.com" target="blanck" class="end-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="blanck" class="end-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="blanck" class="end-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <p class="end-author">© GIFOS 2020 All Rights Reserved.</p>
+            </div>
+        </footer>
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
 </html>

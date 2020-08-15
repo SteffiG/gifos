@@ -34,6 +34,9 @@
             color: $color;
             text-transform: uppercase;
         }
+        &-linkCreate {
+            display: none;
+        }
         .create {
             display: inline-block;
             background: $background;
