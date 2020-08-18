@@ -63,8 +63,27 @@ function trendingSearch() {
         console.log(response);
         return response.json})
     .then((json) => {
-        console.log(json);
-    }).catch((error) => {return error})
+        let info = json.data;
+        console.log(info);
+        /*for( let i = 0; i < info.length; i++) {
+            let trendingWords = document.querySelector(".paragraph");
+            let content = document.querySelector("p");
+            content.
+        }
+        console.log("llegue al word trending", json);
+        */
+    })
+    /*.then((json) => {
+        let images = json.data;
+        for(let i = 0 ; i < images.length; i++ ){
+            let containerSlider = document.querySelector('.card');
+            let node = document.createElement('img');
+            node.src = images[i].images.downsized.url;
+            node.className = 'card-gif';
+            containerSlider.appendChild(node);
+        }
+    })*/
+    .catch((error) => {return error})
 }
 
 //------------------------------------------------------------------
@@ -77,11 +96,9 @@ function search(value) {
     })
     .then((json) => {
         let imagesGif = json.data;
-        console.log("hola");
         let containerGif = document.querySelector('.searchGif');
         containerGif.innerHTML = '';
         for(let i = 0 ; i < imagesGif.length; i++ ){
-            console.log("aqui");
             let node = document.createElement('img');
             node.src = imagesGif[i].images.downsized.url;
             node.className = 'searchGif-img';
@@ -94,7 +111,7 @@ function search(value) {
 //------------------------------------------------------------------
 //AUTOCOMPLETE
 /**
- * @method getTrendingGifos
+ * @method getAutocomplete
  * @description - funcion para autocompletar la palabra o frase del input search
  * @return {}
  */
@@ -109,22 +126,18 @@ function getAutocomplete() {
     .then((json) => {
         let a, b, i, val = that.value;
         let arr = json.data;
-        /*create a DIV element that will contain the items (values):*/
-        a = document.createElement("DIV");
+        a = document.querySelector(".search-autocomplete_list");
         a.setAttribute("id", that.id + "autocomplete_list");
-        a.setAttribute("class", "autocomplete-items");
-        /*append the DIV element as a child of the autocomplete container:*/
-        that.parentNode.appendChild(a);
-        /*for each item in the array...*/
+        a.setAttribute("class", "search-autocomplete_list");
+        //a = document.createElement("DIV");
+        //a.setAttribute("id", that.id + "autocomplete_list");
+        //a.setAttribute("class", "autocomplete-items");
+        // that.parentNode.appendChild(a);
         for ( i = 0; i < arr.length; i++) {
-            /*create a DIV element for each matching element:*/
-            b = document.createElement("DIV");
-            /*make the matching letters bold:*/
+            b = document.querySelector(".search-autocomplete_items");
             b.innerHTML = "<strong>" + arr[i].name.substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].name.substr(val.length);
-            /*insert a input field that will hold the current array item's value:*/
             b.innerHTML += "<input type='hidden' value='" + arr[i].name + "'>";
-            /*execute a function when someone clicks on the item value (DIV element):*/
             b.addEventListener("click", function(e) {
                 console.log("llegoooo");
                 search(this.getElementsByTagName("input")[0].value);
@@ -136,6 +149,11 @@ function getAutocomplete() {
         }
     }).catch((error) => {return error})
 }
+
+const  markUp = ((suggestion) => {
+    return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i>${suggestion}</a></li>`)
+})
+
 
 const removeElements = (elms) => elms.forEach(el => el.remove());
 
@@ -157,4 +175,4 @@ function closeAllLists(elmnt) {
  */
 blackout.addEventListener("click", changeMode);
 searchGif.addEventListener('input', getAutocomplete);
-wordTrending.addEventListener('change', trendingSearch);
+wordTrending.addEventListener('load', trendingSearch);

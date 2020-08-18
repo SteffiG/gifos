@@ -186,83 +186,8 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .init {
-    width: 100%;
-    height: 100px;
-    background: #572EE5;
-    padding-top: 5px;
-  }
-  .init-navigation {
-    width: 100%;
-    height: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background-color: white;
-  }
   .init-navigation .logo_mobile {
     padding: 18px 0 12px 156px;
-  }
-  .init-navigation .menuToggle,
-  .init-navigation .iconToggle,
-  .init-navigation .iconToggle::after,
-  .init-navigation .iconToggle::before,
-  .init-navigation .line {
-    display: none;
-  }
-  .init-navigation .menuInner {
-    position: static;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-transition: none;
-    transition: none;
-    height: 80px;
-    background-color: #FFFFFF;
-    font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .init-navigation .menuInner_list {
-    font-family: "Montserrat", sans-serif;
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-align: center;
-    width: auto;
-    padding-left: 50px;
-  }
-  .init-navigation .menuInner-link, .init-navigation .menuInner-link_style {
-    padding: 36px 0 38px 0;
-    font-size: 13px;
-    color: #572EE5;
-    text-transform: uppercase;
-  }
-  .init-navigation .menuInner-linkCreate {
-    display: none;
-  }
-  .init-navigation .menuInner .create {
-    display: inline-block;
-    background: #FFFFFF;
-    padding: 19px;
-    border: 1px solid #572EE5;
-    border-radius: 50%;
-    margin: 0 156px 0 60px;
-    padding-top: 18px;
   }
   .container .searchGif-img {
     max-width: 260px;

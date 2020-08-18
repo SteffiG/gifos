@@ -14,6 +14,9 @@
     height: 120px;
     margin: 0 10px 25px 10px;
   }
+  .container .search .search-container .search-input {
+    width: 420px;
+  }
   .creating__written::before {
     top: 86%;
   }
