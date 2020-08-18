@@ -52,8 +52,8 @@ function changeMode() {
     //alert("funciona");
     let change = document.body;
     change.classList.toggle("oscuro");
+    document.querySelector(".menuInner-link_style").innerHTML = "Modo Diurno";
 }
-
 //------------------------------------------------------------------
 //TRENDING SEARCH
 
