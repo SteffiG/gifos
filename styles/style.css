@@ -441,6 +441,9 @@ body {
   background: #FFFFFF;
   border: 1px solid #572EE5;
   border-radius: 27px;
+  /*.hidden {
+      display: none;
+    }*/
 }
 
 .container .search .search-container::before {
@@ -514,10 +517,6 @@ body {
   cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #d4d4d4;
-}
-
-.container .search .hidden {
-  display: none;
 }
 
 .container .search .search-autocomplete_list {
@@ -601,6 +600,10 @@ body {
   letter-spacing: 0;
   text-align: center;
   background: white;
+}
+
+.hidden {
+  display: none;
 }
 
 /*.autocomplete {

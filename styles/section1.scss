@@ -94,9 +94,9 @@
         }
       }
     }
-    .hidden {
+    /*.hidden {
       display: none;
-    }
+    }*/
     .search-autocomplete_list{
       width: 210px;
       align-items: flex-start;
@@ -164,6 +164,11 @@
     }
   }
 }
+
+.hidden {
+  display: none;
+}
+
 
 /*.autocomplete {
   position: relative;
