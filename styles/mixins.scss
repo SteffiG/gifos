@@ -29,10 +29,20 @@
             padding-left: 50px;
         }
         &-link, &-link_style {
-            padding: 36px 0 38px 0;
+            margin: 36px 0 38px 0;
             font-size: 13px;
             color: $color;
             text-transform: uppercase;
+        }
+        &-link:hover, &-link_style:hover {
+            border-bottom: 2px solid #5ED7C6;
+        }
+        &-link:active, &-link_style:active {
+            //font-family: $mont;
+            color: #9CAFC3;
+            border-bottom: 0;
+            //letter-spacing: 0;
+            //text-align: center;
         }
         &-linkCreate {
             display: none;
@@ -45,6 +55,14 @@
             border-radius: 50%;
             margin: $margin;
             padding-top: 18px;
+        }
+        .create:hover {
+            background: #572EE5;
+            color: white;
+        }
+        .create:active {
+            background: #9CAFC3;
+            border: 1px solid #9CAFC3;
         }
     }
 }
