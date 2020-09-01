@@ -30,7 +30,24 @@
         .card-gif {
             width: 243px;
             height: 187px;
-            padding: 0 0 84px 22px;
+            margin: 0 0 84px 22px;
         }
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #572EE5;
+        }
+          
+        .card-gif:hover .overlay{
+            opacity: 0.6;
+        }
+        
     }
 }

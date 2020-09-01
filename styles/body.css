@@ -45,25 +45,26 @@ body {
   border: 1px solid white;
 }
 
-.oscuro .container .search-container {
+.oscuro .container .search .search-container {
   background: #37383C;
 }
 
-.oscuro .container .search-container .search-input {
+.oscuro .container .search .search-container .search-input {
   background: #37383C;
   color: white;
 }
 
-.oscuro .container .search-container .search-icon {
-  background: #37383C;
+.oscuro .container .search .search-container .search-icon {
+  background-color: #37383C;
 }
 
-.oscuro .container .search-container .search-icon .fa-search {
+.oscuro .container .search .search-container .search-icon .fa-search {
   color: white;
 }
 
 .oscuro .container .search .search-autocomplete_list {
   background-color: #37383C;
+  color: white;
 }
 
 .oscuro .gifs-paragraph {

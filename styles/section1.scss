@@ -57,7 +57,6 @@
         font-family: $robot;
         margin-left: 55px;
         font-size: 16px;
-        color: #000000;
         text-align: left;
         outline-color: aqua;
       }
@@ -117,7 +116,7 @@
   .search:focus {     
     outline: solid #572EE5;
   }
-  .paragraph {
+  .trending_topics {
     font-family: $mont;
     font-weight: 500;
     font-size: 14px;
@@ -125,9 +124,13 @@
     text-align: center;
     line-height: 25px;
     margin-bottom: 45px;
-    .special-text {
+    &-title {
       font-size: 16px;
       font-weight: 700;
+    }
+    &-words {
+      list-style: none;
+      padding: 10px;
     }
   }
   .searchGif {

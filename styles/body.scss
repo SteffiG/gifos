@@ -21,14 +21,14 @@ body {
         .search {
             background-color: #37383C;
             border: 1px solid white;
-            &-container {
+            .search-container {
                 background: #37383C;
                 .search-input  {
                     background: #37383C;
                     color: white;
                 }
                 .search-icon {
-                    background: #37383C;
+                    background-color: #37383C;
                     .fa-search {
                         color: white;
                     }
@@ -36,6 +36,7 @@ body {
             }
             .search-autocomplete_list{
                 background-color: #37383C;
+                color: white;
             }
         }
     }
