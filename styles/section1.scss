@@ -129,8 +129,15 @@
       font-weight: 700;
     }
     &-words {
+      font-size: 14px;
       list-style: none;
-      padding: 10px;
+      padding: 0 75px;
+    }
+    .trending_topics-words-list {
+      display: inline;
+    }
+    .trending_topics-words-list::after{
+      content: ', ';
     }
   }
   .searchGif {

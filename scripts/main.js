@@ -11,6 +11,8 @@ import api from './services.js';
  */
 const blackout = document.querySelector(".menuInner-link_style");
 const searchGif = document.querySelector(".search-input");
+const trendingWords = document.querySelector(".trending_topics-words");
+const containerGif = document.querySelector('.searchGif');
 
 //--------------------------------------------------------------------------
 //TRENDING GIFOS
@@ -39,37 +41,23 @@ getTrendingGifos();
 //-----------------------------------------------------------------
 //TRENDING SEARCH
 
-/*function trendingSearch() {
-    fetch('https://api.giphy.com/v1/trending/searches?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs')
-    .then((response) => {
-        return response.json()
-    })
+
+function trendingSearch() {
+    api.trendingTopic()
     .then((json) => {
-        let info = json.data;
-        let trendingWords = document.querySelector(".paragraph");
-        let word = document.createElement('p');
-        word.innerHTML = info;
-        trendingWords.appendChild(word);
+        let info = json.data.slice(0, 5);
+        info.forEach(word => {
+            let item = document.createElement('li');
+            item.className = 'trending_topics-words-list';
+            item.innerHTML = capitalize(word);
+            trendingWords.appendChild(item);
+        })
     })
     .catch((error) => {return error})
 }
 
-trendingSearch();
-*/
-
-function trendingSearch() {
-    fetch('https://api.giphy.com/v1/trending/searches?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs')
-    .then((response) => {
-        return response.json()
-    })
-    .then((json) => {
-        let info = json.data.slice(0, 5);
-        let trendingWords = document.querySelector(".trending_topics-words");
-        let word = document.createElement('li');
-        word.innerHTML = info.join(', ');
-        trendingWords.appendChild(word);
-    })
-    .catch((error) => {return error})
+function capitalize(s) {
+    return s[0].toUpperCase() + s.slice(1);
 }
 
 trendingSearch();
@@ -100,8 +88,7 @@ function search(value) {
         return response.json();
     })
     .then((json) => {
-        let imagesGif = json.data;
-        let containerGif = document.querySelector('.searchGif');
+        let imagesGif = json.data;  
         containerGif.innerHTML = '';
         for(let i = 0 ; i < imagesGif.length; i++ ){
             let node = document.createElement('img');
@@ -161,8 +148,8 @@ const  markUp = ((suggestion) => {
 function closeAllLists(elmnt) {
     /*close all autocomplete lists in the document,
     except the one passed as an argument:*/
-    document.querySelectorAll('.search-autocomplete_items').forEach((b) => b.remove())
-    document.querySelectorAll('.search-autocomplete_list').forEach((a) => a.className = 'hidden')
+    document.querySelectorAll('.search-autocomplete_items').forEach((b) => b.remove());
+    document.querySelectorAll('.search-autocomplete_list').forEach((a) => a.className = 'hidden');
 }
 
 //------------------------------------------------------------------

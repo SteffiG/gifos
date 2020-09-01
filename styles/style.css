@@ -560,8 +560,17 @@ body {
 }
 
 .container .trending_topics-words {
+  font-size: 14px;
   list-style: none;
-  padding: 10px;
+  padding: 0 75px;
+}
+
+.container .trending_topics .trending_topics-words-list {
+  display: inline;
+}
+
+.container .trending_topics .trending_topics-words-list::after {
+  content: ', ';
 }
 
 .container .searchGif {

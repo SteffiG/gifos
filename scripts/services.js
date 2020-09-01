@@ -14,6 +14,14 @@ const api = {
             .then((response) => resolve(response.json()))
             .catch((error) => reject(error))
         })
+    }),
+
+    trendingTopic: (() => {
+        return new Promise((resolve, reject) => {
+            fetch('https://api.giphy.com/v1/trending/searches?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs')
+            .then((response) => resolve(response.json()))
+            .catch((error) => reject(error))
+        })
     })
 }
 
