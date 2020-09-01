@@ -569,7 +569,7 @@ body {
   display: inline;
 }
 
-.container .trending_topics .trending_topics-words-list::after {
+.container .trending_topics .trending_topics-words-list:nth-child(-n+4)::after {
   content: ', ';
 }
 

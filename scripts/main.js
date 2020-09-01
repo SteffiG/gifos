@@ -41,7 +41,6 @@ getTrendingGifos();
 //-----------------------------------------------------------------
 //TRENDING SEARCH
 
-
 function trendingSearch() {
     api.trendingTopic()
     .then((json) => {
@@ -81,6 +80,12 @@ function changeMode() {
 
 //------------------------------------------------------------------
 //SEARCH GIF
+/**
+ * @method search
+ * @description - busca los gifs segun el valor ingresado por el usuario
+ * @param {*} value 
+ */
+
 function search(value) {
     const URL = `https://api.giphy.com/v1/gifs/search?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs&q=${value}&limit=12&rating=g`;
     fetch(URL)
@@ -134,11 +139,6 @@ function getAutocomplete() {
         }
     }).catch((error) => {return error})
 }
-/*
-const  markUp = ((suggestion) => {
-    return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i>${suggestion}</a></li>`)
-})
-*/
 
 //const removeElements = (elms) => elms.forEach(el => el.remove());
 

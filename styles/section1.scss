@@ -136,7 +136,7 @@
     .trending_topics-words-list {
       display: inline;
     }
-    .trending_topics-words-list::after{
+    .trending_topics-words-list:nth-child(-n+4)::after{
       content: ', ';
     }
   }
