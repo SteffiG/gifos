@@ -59,11 +59,15 @@
   margin: 0 0 84px 22px;
 }
 
-.gifos .card .card-gif_link .icon-fav {
+.gifos .card .card-gif_link {
   position: relative;
+}
+
+.gifos .card .card-gif_link .icon-fav {
+  position: absolute;
   display: inline;
   top: 10px;
-  right: 125px;
+  right: 90px;
   padding: 8px 7px;
   opacity: 0.7;
   background: #FFFFFF;
@@ -72,12 +76,12 @@
 }
 
 .gifos .card .card-gif_link .icon-download {
-  position: relative;
+  position: absolute;
   display: inline;
   margin: 0 11px;
   top: 10px;
-  right: 125px;
-  padding: 7px 7px;
+  right: 40px;
+  padding: 6.5px 7px;
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
@@ -85,10 +89,10 @@
 }
 
 .gifos .card .card-gif_link .icon-max {
-  position: relative;
+  position: absolute;
   display: inline;
   top: 10px;
-  right: 125px;
+  right: 10px;
   padding: 8px 7px;
   opacity: 0.7;
   background: #FFFFFF;
