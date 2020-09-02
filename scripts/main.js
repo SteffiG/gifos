@@ -21,39 +21,58 @@ const containerGif = document.querySelector('.searchGif');
  * @description - funcion para mostrar los trending gifos
  * @return {}
  */
+let gif = '';
 
 function getTrendingGifos() {
     api.gifosTrending()
-    .then((json) => {
+    .then(async (json) => {
         let images = json.data;
-        for(let i = 0 ; i < images.length; i++ ){
+        for(let i = 0 ; i < images.length; i++){
             let containerSlider = document.querySelector('.card');
-            let node = document.createElement('img');
-            node.src = images[i].images.downsized.url;
-            node.className = 'card-gif';
-            containerSlider.appendChild(node);
+            let image = await fetch(images[i].images.downsized.url);
+            let imageConverted = await image.blob();
+            gif += markUpGifTrending(window.URL.createObjectURL(imageConverted));
+            containerSlider.innerHTML = gif;
         }
-    })
+    }).catch((error) => {return(error)})
 }
+
+const markUpGifTrending = (url => {
+    return (`<img src='${url}' alt="gifs" class="card-gif">
+      <a href='${url}' class="card-gif_link">
+        <img class="icon-fav" src="./assets/icon-fav-hover.svg" alt="favorites">
+      </a>
+      <a href='${url}' class="card-gif_link" download>
+        <img class="icon-download" src="./assets/icon-download.svg" alt="download">
+      </a>
+      <a href='${url}' class="card-gif_link">
+        <img class="icon-max" src="./assets/icon-max.svg" alt="max">
+      </a>`)
+      ;
+});
 
 getTrendingGifos();
 
 //-----------------------------------------------------------------
 //TRENDING SEARCH
 
+let item = '';
+
 function trendingSearch() {
     api.trendingTopic()
     .then((json) => {
         let info = json.data.slice(0, 5);
         info.forEach(word => {
-            let item = document.createElement('li');
-            item.className = 'trending_topics-words-list';
-            item.innerHTML = capitalize(word);
-            trendingWords.appendChild(item);
+            item += markUp(word);
+            trendingWords.innerHTML = item;
         })
     })
     .catch((error) => {return error})
 }
+
+const markUp = (word => {
+    return (`<li class="trending_topics-words-list"><a href="#search" class="topic_list">${capitalize(word)}</a></li>`);
+});
 
 function capitalize(s) {
     return s[0].toUpperCase() + s.slice(1);
@@ -111,6 +130,8 @@ function search(value) {
  * @description - funcion para autocompletar la palabra o frase del input search
  * @return {}
  */
+let currentFocus; 
+
 
 function getAutocomplete() {
     let that = this;
@@ -118,7 +139,7 @@ function getAutocomplete() {
     fetch(URL)
     .then((response) => {
         return response.json();
-    }) 
+    })
     .then((json) => {
         let a, b, i, val = that.value;
         let arr = json.data;
@@ -127,11 +148,12 @@ function getAutocomplete() {
         a.setAttribute("class", "search-autocomplete_list");
         for ( i = 0; i < arr.length; i++) {
             b = document.querySelector(".search-autocomplete_items");
-            b.innerHTML = "<strong>" + arr[i].name.substr(0, val.length) + "</strong>";
+            b.innerHTML = `<strong> ${capitalize(arr[i].name.substr(0, val.length))}</strong>`;
             b.innerHTML += arr[i].name.substr(val.length);
-            b.innerHTML += "<input type='hidden' value='" + arr[i].name + "'>";
+            b.innerHTML += `<input type='hidden' value='${arr[i].name}'>`;
             b.addEventListener("click", function(e) {
-                search(this.getElementsByTagName("input")[0].value);
+                //Llamo la funcion search
+                search(that.value);
                 that.value = this.getElementsByTagName("input")[0].value;
                 closeAllLists(that);
             });
@@ -139,6 +161,41 @@ function getAutocomplete() {
         }
     }).catch((error) => {return error})
 }
+
+/*execute a function presses a key on the keyboard:*/
+/*inp.addEventListener("keydown", function(e) {
+    var x = document.getElementById(this.id + "autocomplete-list");
+    if (x) x = x.getElementsByTagName("div");
+    if (e.keyCode == 40) {
+      /*If the arrow DOWN key is pressed,
+      increase the currentFocus variable:*/
+    //  currentFocus++
+      /*and and make the current item more visible:*/
+    //  addActive(x);
+    //} else if (e.keyCode == 38) { //up
+      /*If the arrow UP key is pressed,
+      decrease the currentFocus variable:*/
+    //  currentFocus--;
+      /*and and make the current item more visible:*/
+    //  addActive(x);
+    //} else if (e.keyCode == 13) {
+      /*If the ENTER key is pressed, prevent the form from being submitted,*/
+    /*  e.preventDefault();
+      if (currentFocus > -1) {
+        /*and simulate a click on the "active" item:
+        if (x) x[currentFocus].click();
+      }
+    }
+});*/
+
+
+
+
+
+const listMarkUp = (topic => {
+    return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search">${capitalize(topic)}</i></a></li>`);
+});
+
 
 //const removeElements = (elms) => elms.forEach(el => el.remove());
 

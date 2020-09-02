@@ -35,8 +35,7 @@
             <section class="container">
                 <h1 class="title">Inspírate, busca, guarda, y crea los mejores <span class="decoration-title">GIFOS</span></h1>
                 <img class="ilustration" src="./assets/ilustra_header.svg" alt="Ilustration title">
-                <!--Buscador-->
-                <div class="search">
+                <div class="search" id="search">
                     <div class="search-container">
                         <input type="text" class="search-input" name="search" id="myInput" placeholder="Busca GIFOS y más">
                         <button class="search-icon"><i class="fas fa-search"></i></button>
@@ -49,15 +48,15 @@
                         <li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i></a></li>
                     </ul>
                 </div>
-                <!--<div class="paragraph">
-                    <p class="special-text">Trending:</span>
-                    <br/>Reactions, Entertainment,
-                    <br/>Sports, Stickers, Artists
-                    <p class="paragraph"></p>
-                </div>-->
                 <div class="trending_topics">
                     <p class="trending_topics-title">Trending:</p>
-                    <ul class="trending_topics-words"></ul>
+                    <ul class="trending_topics-words">
+                        <li class="trending_topics-words-list"><a href="#search" class="topic_list"></a></li>
+                        <li class="trending_topics-words-list"><a href="#search" class="topic_list"></a></li>
+                        <li class="trending_topics-words-list"><a href="#search" class="topic_list"></a></li>
+                        <li class="trending_topics-words-list"><a href="#search" class="topic_list"></a></li>
+                        <li class="trending_topics-words-list"><a href="#search" class="topic_list"></a></li>
+                    </ul>
                 </div>
                 <div class="searchGif hidden">
                     <p class="searchName hidden"></p>
@@ -72,8 +71,7 @@
                     Mira los últimos 
                     <br/>GIFOS de nuestra comunidad.
                 </p>
-                <div class="card">
-                </div>
+                <div class="card"></div>
             </section>
         </main>
         <footer class="end">

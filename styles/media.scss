@@ -72,6 +72,16 @@
                 height: 150px;
             }
         }
+        .trending_topics {
+            margin-top: 73px;
+            margin-bottom: 95px;
+            &-title {
+                font-size: 18px;
+            }
+            &-words {
+                font-size: 16px;
+            }
+        }
     }
 
     .gifs {

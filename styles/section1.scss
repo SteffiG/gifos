@@ -74,7 +74,7 @@
           outline-color: aqua;
         }
       }
-      .autocomplete-items {
+      /*.autocomplete-items {
         margin-left: 23px;
         position: absolute;
         width: 100%;
@@ -91,12 +91,15 @@
           background-color: #fff; 
           border-bottom: 1px solid #d4d4d4; 
         }
-      }
+      }*/
     }
     /*.hidden {
       display: none;
     }*/
     .search-autocomplete_list{
+      font-family: $robot;
+      font-size: 16px;
+      color: #000000;
       width: 210px;
       align-items: flex-start;
       padding: 0;
@@ -123,18 +126,25 @@
     color: #572EE5;
     text-align: center;
     line-height: 25px;
+    margin-top: 31px;
     margin-bottom: 45px;
     &-title {
+      margin: 0;
       font-size: 16px;
       font-weight: 700;
     }
     &-words {
+      margin: 0;
       font-size: 14px;
       list-style: none;
       padding: 0 75px;
     }
     .trending_topics-words-list {
       display: inline;
+      .topic_list {
+        text-decoration: none;
+        color: #572EE5;
+      }
     }
     .trending_topics-words-list:nth-child(-n+4)::after{
       content: ', ';

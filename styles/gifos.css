@@ -36,6 +36,21 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: auto;
+  /*.overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #572EE5;
+        } 
+        .card-gif:hover .overlay{
+            opacity: 0.6;
+        }*/
 }
 
 .gifos .card .card-gif {
@@ -44,21 +59,40 @@
   margin: 0 0 84px 22px;
 }
 
-.gifos .card .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  background-color: #572EE5;
+.gifos .card .card-gif_link .icon-fav {
+  position: relative;
+  display: inline;
+  top: 10px;
+  right: 125px;
+  padding: 8px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
 }
 
-.gifos .card .card-gif:hover .overlay {
-  opacity: 0.6;
+.gifos .card .card-gif_link .icon-download {
+  position: relative;
+  display: inline;
+  margin: 0 11px;
+  top: 10px;
+  right: 125px;
+  padding: 7px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
+}
+
+.gifos .card .card-gif_link .icon-max {
+  position: relative;
+  display: inline;
+  top: 10px;
+  right: 125px;
+  padding: 8px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
 }
 /*# sourceMappingURL=gifos.css.map */

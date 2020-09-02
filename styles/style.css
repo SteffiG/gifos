@@ -32,7 +32,7 @@ body {
   color: white;
 }
 
-.oscuro .container .paragraph {
+.oscuro .container .trending_topics {
   color: white;
 }
 
@@ -471,6 +471,24 @@ body {
           justify-content: center;
   min-height: 3.125em;
   border-radius: 27px;
+  /*.autocomplete-items {
+        margin-left: 23px;
+        position: absolute;
+        width: 100%;
+        //border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        top: 100%;
+        left: 0;
+        right: 0;
+        .autocomplete-items div {
+          padding: 10px;
+          cursor: pointer;
+          background-color: #fff; 
+          border-bottom: 1px solid #d4d4d4; 
+        }
+      }*/
 }
 
 .container .search .search-container .search-input {
@@ -500,26 +518,10 @@ body {
   outline-color: aqua;
 }
 
-.container .search .search-container .autocomplete-items {
-  margin-left: 23px;
-  position: absolute;
-  width: 100%;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-
-.container .search .search-container .autocomplete-items .autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff;
-  border-bottom: 1px solid #d4d4d4;
-}
-
 .container .search .search-autocomplete_list {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #000000;
   width: 210px;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -551,15 +553,18 @@ body {
   color: #572EE5;
   text-align: center;
   line-height: 25px;
+  margin-top: 31px;
   margin-bottom: 45px;
 }
 
 .container .trending_topics-title {
+  margin: 0;
   font-size: 16px;
   font-weight: 700;
 }
 
 .container .trending_topics-words {
+  margin: 0;
   font-size: 14px;
   list-style: none;
   padding: 0 75px;
@@ -567,6 +572,11 @@ body {
 
 .container .trending_topics .trending_topics-words-list {
   display: inline;
+}
+
+.container .trending_topics .trending_topics-words-list .topic_list {
+  text-decoration: none;
+  color: #572EE5;
 }
 
 .container .trending_topics .trending_topics-words-list:nth-child(-n+4)::after {
@@ -888,6 +898,16 @@ input[type=text] {
   .container .searchGif-img {
     max-width: 200px;
     height: 150px;
+  }
+  .container .trending_topics {
+    margin-top: 73px;
+    margin-bottom: 95px;
+  }
+  .container .trending_topics-title {
+    font-size: 18px;
+  }
+  .container .trending_topics-words {
+    font-size: 16px;
   }
   .gifs-logo {
     padding: 11px 0 8px 0;
@@ -1225,6 +1245,21 @@ input[type=text] {
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: auto;
+  /*.overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .3s ease;
+            background-color: #572EE5;
+        } 
+        .card-gif:hover .overlay{
+            opacity: 0.6;
+        }*/
 }
 
 .gifos .card .card-gif {
@@ -1233,22 +1268,41 @@ input[type=text] {
   margin: 0 0 84px 22px;
 }
 
-.gifos .card .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-  background-color: #572EE5;
+.gifos .card .card-gif_link .icon-fav {
+  position: relative;
+  display: inline;
+  top: 10px;
+  right: 125px;
+  padding: 8px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
 }
 
-.gifos .card .card-gif:hover .overlay {
-  opacity: 0.6;
+.gifos .card .card-gif_link .icon-download {
+  position: relative;
+  display: inline;
+  margin: 0 11px;
+  top: 10px;
+  right: 125px;
+  padding: 7px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
+}
+
+.gifos .card .card-gif_link .icon-max {
+  position: relative;
+  display: inline;
+  top: 10px;
+  right: 125px;
+  padding: 8px 7px;
+  opacity: 0.7;
+  background: #FFFFFF;
+  border-radius: 6px;
+  border-radius: 6px;
 }
 
 .end {
@@ -1446,6 +1500,16 @@ input[type=text] {
   .container .searchGif-img {
     max-width: 200px;
     height: 150px;
+  }
+  .container .trending_topics {
+    margin-top: 73px;
+    margin-bottom: 95px;
+  }
+  .container .trending_topics-title {
+    font-size: 18px;
+  }
+  .container .trending_topics-words {
+    font-size: 16px;
   }
   .gifs-logo {
     padding: 11px 0 8px 0;
