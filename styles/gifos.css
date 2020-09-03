@@ -36,8 +36,11 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: auto;
+  /*.card-gif:hover + .card-gif_link {
+            display: block;
+        }*/
   /*.overlay {
-            position: absolute;
+            //position: relative;
             top: 0;
             bottom: 0;
             left: 0;
@@ -48,55 +51,50 @@
             transition: .3s ease;
             background-color: #572EE5;
         } 
-        .card-gif:hover .overlay{
+        .card-gif:hover + .overlay{
             opacity: 0.6;
+            z-index: 10;
         }*/
 }
 
-.gifos .card .card-gif {
-  width: 243px;
-  height: 187px;
-  margin: 0 0 84px 22px;
-}
-
-.gifos .card .card-gif_link {
+.gifos .card .card-container {
   position: relative;
 }
 
-.gifos .card .card-gif_link .icon-fav {
+.gifos .card .card-container .card-gif {
+  width: 243px;
+  height: 187px;
+  margin: 0 0 82px 22px;
+}
+
+.gifos .card .card-container .card-gif_link .icon-fav {
   position: absolute;
-  display: inline;
   top: 10px;
   right: 90px;
   padding: 8px 7px;
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
-  border-radius: 6px;
 }
 
-.gifos .card .card-gif_link .icon-download {
+.gifos .card .card-container .card-gif_link .icon-download {
   position: absolute;
-  display: inline;
-  margin: 0 11px;
   top: 10px;
   right: 40px;
-  padding: 6.5px 7px;
+  padding: 8px 7px;
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
-  border-radius: 6px;
+  margin: 0 10px;
 }
 
-.gifos .card .card-gif_link .icon-max {
+.gifos .card .card-container .card-gif_link .icon-max {
   position: absolute;
-  display: inline;
   top: 10px;
   right: 10px;
   padding: 8px 7px;
   opacity: 0.7;
   background: #FFFFFF;
-  border-radius: 6px;
   border-radius: 6px;
 }
 /*# sourceMappingURL=gifos.css.map */

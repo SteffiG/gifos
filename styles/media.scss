@@ -93,6 +93,23 @@
         }
     }
     
+    .gifos {
+        .gifos-title {
+            font-size: 25px;
+        }
+        .gifos-paragraph {
+            font-size: 18px;
+        }
+        .card {
+            .card-container {
+                .card-gif {
+                    height: 275px;
+                    margin: 0 0 182px 28px;
+                }
+            }
+        }
+    }
+
     .oscuro {
         @include header-desktop();
     }

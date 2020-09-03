@@ -36,9 +36,20 @@ function getTrendingGifos() {
         }
     }).catch((error) => {return(error)})
 }
+/*
+const view = document.querySelectorAll('.card-gif');
+view[0].addEventListener('mouseover', event);
+console.log(view);
+function event() {
+    console.log(event);
+    let icons = document.querySelectorAll('.card-gif_link');
+    icons = event.target.style.display = 'block';
+}
+*/
 
 const markUpGifTrending = (url => {
-    return (`<img src='${url}' alt="gifs" class="card-gif">
+    return (`<div class="card-container">
+      <img src='${url}' alt="gifs" class="card-gif">
       <a href='${url}' class="card-gif_link">
         <img class="icon-fav" src="./assets/icon-fav-hover.svg" alt="favorites">
       </a>
@@ -47,8 +58,9 @@ const markUpGifTrending = (url => {
       </a>
       <a href='${url}' class="card-gif_link">
         <img class="icon-max" src="./assets/icon-max.svg" alt="max">
-      </a>`)
-      ;
+      </a>
+    </div>`
+    );
 });
 
 getTrendingGifos();
