@@ -134,11 +134,32 @@
     max-width: 200px;
     height: 150px;
   }
+  .container .trending_topics {
+    margin-top: 73px;
+    margin-bottom: 95px;
+  }
+  .container .trending_topics-title {
+    font-size: 18px;
+  }
+  .container .trending_topics-words {
+    font-size: 16px;
+  }
   .gifs-logo {
     padding: 11px 0 8px 0;
   }
   .gifs-paragraph {
     margin-bottom: 36px;
+  }
+  .gifos .gifos-title {
+    font-size: 25px;
+  }
+  .gifos .gifos-paragraph {
+    font-size: 18px;
+  }
+  .gifos .card .card-container .card-gif {
+    width: 357px;
+    height: 275px;
+    margin: 0 0 182px 28px;
   }
   .oscuro .init-navigation {
     background: #37383C;

@@ -921,9 +921,13 @@ input[type=text] {
   .gifos .gifos-paragraph {
     font-size: 18px;
   }
-  .gifos .card .card-container .card-gif {
+  .gifos .card .card-container {
     height: 275px;
     margin: 0 0 182px 28px;
+  }
+  .gifos .card .card-container .card-gif {
+    width: 357px;
+    height: 275px;
   }
   .oscuro .init-navigation {
     background: #37383C;
@@ -1255,35 +1259,16 @@ input[type=text] {
       -ms-flex-pack: start;
           justify-content: flex-start;
   overflow: auto;
-  /*.card-gif:hover + .card-gif_link {
-            display: block;
-        }*/
-  /*.overlay {
-            //position: relative;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .3s ease;
-            background-color: #572EE5;
-        } 
-        .card-gif:hover + .overlay{
-            opacity: 0.6;
-            z-index: 10;
-        }*/
 }
 
 .gifos .card .card-container {
   position: relative;
+  margin: 0 0 82px 22px;
 }
 
 .gifos .card .card-container .card-gif {
   width: 243px;
   height: 187px;
-  margin: 0 0 82px 22px;
 }
 
 .gifos .card .card-container .card-gif_link .icon-fav {
@@ -1294,6 +1279,7 @@ input[type=text] {
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
+  z-index: 10;
 }
 
 .gifos .card .card-container .card-gif_link .icon-download {
@@ -1304,6 +1290,7 @@ input[type=text] {
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
+  z-index: 10;
   margin: 0 10px;
 }
 
@@ -1315,6 +1302,37 @@ input[type=text] {
   opacity: 0.7;
   background: #FFFFFF;
   border-radius: 6px;
+  z-index: 10;
+}
+
+.gifos .card .card-container .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #572EE5;
+}
+
+.gifos .card .card-container:hover {
+  cursor: pointer;
+}
+
+.gifos .card .card-container:hover .hidden {
+  display: block;
+}
+
+.gifos .card .card-container:hover .overlay {
+  opacity: 0.6;
+}
+
+.gifos .card .card-container:hover .card-gif_link .icon-fav:hover, .gifos .card .card-container:hover .card-gif_link .icon-download:hover, .gifos .card .card-container:hover .card-gif_link .icon-max:hover {
+  opacity: 1;
 }
 
 .end {
@@ -1535,9 +1553,13 @@ input[type=text] {
   .gifos .gifos-paragraph {
     font-size: 18px;
   }
-  .gifos .card .card-container .card-gif {
+  .gifos .card .card-container {
     height: 275px;
     margin: 0 0 182px 28px;
+  }
+  .gifos .card .card-container .card-gif {
+    width: 357px;
+    height: 275px;
   }
   .oscuro .init-navigation {
     background: #37383C;

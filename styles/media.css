@@ -156,9 +156,13 @@
   .gifos .gifos-paragraph {
     font-size: 18px;
   }
-  .gifos .card .card-container .card-gif {
+  .gifos .card .card-container {
     height: 275px;
     margin: 0 0 182px 28px;
+  }
+  .gifos .card .card-container .card-gif {
+    width: 357px;
+    height: 275px;
   }
   .oscuro .init-navigation {
     background: #37383C;

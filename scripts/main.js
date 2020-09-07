@@ -3,6 +3,7 @@
  */
 
 import api from './services.js';
+import capitalize  from './helpers.js';
 
 //---------------------------------------------------------------------------
 
@@ -13,6 +14,33 @@ const blackout = document.querySelector(".menuInner-link_style");
 const searchGif = document.querySelector(".search-input");
 const trendingWords = document.querySelector(".trending_topics-words");
 const containerGif = document.querySelector('.searchGif');
+let gif = '';
+let item = '';
+
+
+//-----------------------------------------------------------------------------
+//CALL FUNCTION
+
+
+//-----------------------------------------------------------------------------
+//TRENDING SEARCH
+
+function trendingSearch() {
+    api.trendingTopic()
+    .then((json) => {
+        let info = json.data.slice(0, 5);
+        info.forEach(word => {
+            item += markUp(word);
+            trendingWords.innerHTML = item;
+        })
+    })
+    .catch((error) => {return error})
+}
+trendingSearch();
+
+const markUp = ((word, url) => {
+    return (`<li class="trending_topics-words-list"><a href='${url}' class="topic_list">${capitalize(word)}</a></li>`);
+});
 
 //--------------------------------------------------------------------------
 //TRENDING GIFOS
@@ -21,7 +49,6 @@ const containerGif = document.querySelector('.searchGif');
  * @description - funcion para mostrar los trending gifos
  * @return {}
  */
-let gif = '';
 
 function getTrendingGifos() {
     api.gifosTrending()
@@ -36,62 +63,52 @@ function getTrendingGifos() {
         }
     }).catch((error) => {return(error)})
 }
-/*
-const view = document.querySelectorAll('.card-gif');
-view[0].addEventListener('mouseover', event);
-console.log(view);
-function event() {
-    console.log(event);
-    let icons = document.querySelectorAll('.card-gif_link');
-    icons = event.target.style.display = 'block';
-}
-*/
-
 const markUpGifTrending = (url => {
     return (`<div class="card-container">
       <img src='${url}' alt="gifs" class="card-gif">
-      <a href='${url}' class="card-gif_link">
+      <a href='' class="card-gif_link hidden">
         <img class="icon-fav" src="./assets/icon-fav-hover.svg" alt="favorites">
       </a>
-      <a href='${url}' class="card-gif_link" download>
+      <a href='${url}' class="card-gif_link hidden" download>
         <img class="icon-download" src="./assets/icon-download.svg" alt="download">
       </a>
-      <a href='${url}' class="card-gif_link">
+      <a href='' class="card-gif_link hidden">
         <img class="icon-max" src="./assets/icon-max.svg" alt="max">
       </a>
+      <div class="overlay"></div>
     </div>`
     );
 });
-
 getTrendingGifos();
+//------------------------------------------------------------------------
+//FAVORITES
+//const favorites = document.querySelectorAll('.icon-fav');
+/*favorites.addEventListener('click', favoritesIcon);
+function favoritesIcon() {
+    let images = json.data;
+    for(let i = 0 ; i < images.length; i++){
+        let containerSlider = document.querySelector('.card');
+        let  getGif ='';
+        getGif += markUpGifTrending(images[i].images.downsized.url);
+        containerSlider.innerHTML = getGif;
+    }
+}*/
 
-//-----------------------------------------------------------------
-//TRENDING SEARCH
-
-let item = '';
-
-function trendingSearch() {
-    api.trendingTopic()
+/* favorites.addEventListener('click', (favoritesIcon => {
+    api.gifosTrending()
     .then((json) => {
-        let info = json.data.slice(0, 5);
-        info.forEach(word => {
-            item += markUp(word);
-            trendingWords.innerHTML = item;
-        })
-    })
-    .catch((error) => {return error})
-}
-
-const markUp = (word => {
-    return (`<li class="trending_topics-words-list"><a href="#search" class="topic_list">${capitalize(word)}</a></li>`);
-});
-
-function capitalize(s) {
-    return s[0].toUpperCase() + s.slice(1);
-}
-
-trendingSearch();
-
+        let images = json.data;
+        for(let i = 0 ; i < images.length; i++){
+            let containerSlider = document.querySelector('.card');
+            let arrGif = [];
+            arrGif.push(image) = images[i].images.downsized.url;
+            //arrGif.push(image) = [image];
+            gif += markUpGifTrending(arrGif);
+            containerSlider.innerHTML = gif;
+        }
+    }).catch((error) => {return(error)})
+}));
+console.log(favoritesIcon());*/
 
 //------------------------------------------------------------------
 //DARK MODE
@@ -200,14 +217,10 @@ function getAutocomplete() {
     }
 });*/
 
-
-
-
-
-const listMarkUp = (topic => {
+/*const listMarkUp = (topic => {
     return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search">${capitalize(topic)}</i></a></li>`);
 });
-
+*/
 
 //const removeElements = (elms) => elms.forEach(el => el.remove());
 

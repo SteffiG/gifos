@@ -102,9 +102,11 @@
         }
         .card {
             .card-container {
+                height: 275px;
+                margin: 0 0 182px 28px;
                 .card-gif {
+                    width: 357px;
                     height: 275px;
-                    margin: 0 0 182px 28px;
                 }
             }
         }

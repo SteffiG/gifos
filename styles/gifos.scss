@@ -31,12 +31,12 @@
         overflow: auto;
         .card-container {
             position: relative;
+            margin: 0 0 82px 22px;
             .card-gif {
                 width: 243px;
                 height: 187px;
-                margin: 0 0 82px 22px;
             }
-           .card-gif_link {
+            .card-gif_link {
                 .icon-fav{
                     @include icon($right: 90px);
                 }
@@ -48,27 +48,33 @@
                     @include icon();
                 }
             }
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #572EE5;
+            }
         }
-        
-        /*.card-gif:hover + .card-gif_link {
-            display: block;
-        }*/
-        /*.overlay {
-            //position: relative;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .3s ease;
-            background-color: #572EE5;
-        } 
-        .card-gif:hover + .overlay{
-            opacity: 0.6;
-            z-index: 10;
-        }*/
-        
+        .card-container:hover {
+            cursor: pointer;
+            .hidden {
+                display: block;
+            }
+            .overlay{
+                opacity: 0.6;
+            }
+            .card-gif_link {
+                .icon-fav:hover, .icon-download:hover, .icon-max:hover {
+                    opacity: 1;
+                }
+            } 
+        }
+            
     }
 }
