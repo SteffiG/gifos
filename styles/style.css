@@ -315,6 +315,22 @@ body {
   margin-bottom: 46px;
 }
 
+.favorites__withoutResults .heart {
+  width: 76px;
+  height: 54px;
+  padding: 47px 37px;
+  border-radius: 50%;
+  background: #F3F5F8;
+}
+
+.favorites__withoutResults--paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 33px;
+}
+
 .view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -684,6 +700,22 @@ input[type=text] {
   margin-bottom: 46px;
 }
 
+.favorites__withoutResults .heart {
+  width: 76px;
+  height: 54px;
+  padding: 47px 37px;
+  border-radius: 50%;
+  background: #F3F5F8;
+}
+
+.favorites__withoutResults--paragraph {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  color: #50E3C2;
+  text-align: center;
+  line-height: 33px;
+}
+
 .view {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -997,7 +1029,7 @@ input[type=text] {
     padding: 18px 0 12px 156px;
   }
   .container .searchGif-img {
-    max-width: 260px;
+    width: 300px;
     height: 200px;
   }
   .creating {
@@ -1629,7 +1661,7 @@ input[type=text] {
     padding: 18px 0 12px 156px;
   }
   .container .searchGif-img {
-    max-width: 260px;
+    width: 300px;
     height: 200px;
   }
   .creating {

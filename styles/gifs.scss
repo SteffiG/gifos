@@ -20,6 +20,23 @@
     }
 }
 
+.favorites__withoutResults {
+    .heart {
+        width: 76px;
+        height: 54px;
+        padding: 47px 37px;
+        border-radius: 50%;
+        background: #F3F5F8;
+    }
+    &--paragraph {
+        font-family: $mont;
+        font-size: 22px;
+        color: #50E3C2;
+        text-align: center;
+        line-height: 33px;
+    }
+}
+
 .view {
     display: flex;
     flex-direction: column;

@@ -156,10 +156,13 @@
   .gifos .gifos-paragraph {
     font-size: 18px;
   }
+  .gifos .card .card-container {
+    height: 275px;
+    margin: 0 0 182px 28px;
+  }
   .gifos .card .card-container .card-gif {
     width: 357px;
     height: 275px;
-    margin: 0 0 182px 28px;
   }
   .oscuro .init-navigation {
     background: #37383C;
@@ -229,7 +232,7 @@
     padding: 18px 0 12px 156px;
   }
   .container .searchGif-img {
-    max-width: 260px;
+    width: 300px;
     height: 200px;
   }
   .creating {
