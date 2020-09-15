@@ -43,6 +43,18 @@
             padding-bottom: 1em;
         }
     }
+    //Cambiarlo a relativo a la seccion y modificar los @media
+    /*&__written::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        top: 94%;
+        //position: relative;
+        width: 80%;
+        height: 7px;
+        background-color: #572EE5;
+        bottom: 0;
+    }*/
     &__options {
         display: flex;
         flex-direction: row;
@@ -72,17 +84,8 @@
             display: none;
         }
     }
-//Cambiarlo a relativo a la seccion y modificar los @media
-    &__written::before {
-        content: "";
-        position: absolute;
-        width: 80%;
-        top: 94%;
-        height: 7px;
-        background-color: #572EE5;
-        bottom: 0;
-    }
     &__button {
+        position: relative;
         padding: 20px 0;
         &--start {
             border: 1px solid #572EE5;
@@ -98,4 +101,15 @@
             background: white;
         }
     }
+}
+
+.creating::after {
+    content: "";
+    position: absolute;
+    top: 115%;
+    //position: relative;
+    width: 90%;
+    height: 7px;
+    background-color: #572EE5;
+    bottom: 0;   
 }

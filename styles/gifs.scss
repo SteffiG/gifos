@@ -21,6 +21,9 @@
 }
 
 .favorites__withoutResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .heart {
         width: 76px;
         height: 54px;
@@ -29,11 +32,13 @@
         background: #F3F5F8;
     }
     &--paragraph {
+        width: 300px;
         font-family: $mont;
-        font-size: 22px;
+        font-size: 16px;
         color: #50E3C2;
         text-align: center;
         line-height: 33px;
+        margin-bottom: 70px;
     }
 }
 
@@ -46,6 +51,8 @@
         flex-direction: column;
         align-items: center;
         .img-gif {
+            width: 156px;
+            height: 120px;
             padding-bottom: 21px;
         }
     }
@@ -70,14 +77,6 @@
     }*/
 }
 
-@media screen and (min-width: 375px) {
-    .view {
-        &-section_img {
-            flex-flow: row wrap;
-            justify-content: center;
-            .img-gif {
-                padding: 0 0 25px 21px;
-            }
-        }
-    }
+.hidden {
+    display: none;
 }

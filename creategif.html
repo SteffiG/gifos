@@ -22,7 +22,8 @@
                 </div>
                 <nav class="menu">
                     <ul class="menuInner">
-                        <li class="menuInner_list"> <a class="menuInner-link_style" href="#">Modo Nocturno</a></li>
+                        <li class="menuInner_list"> <a class="menuInner-link_style dark" href="#">Modo Nocturno</a></li>
+                        <li class="menuInner_list"> <a class="menuInner-link_style light hidden" href="#">Modo Diurno</a></li>
                         <li class="menuInner_list"> <a class="menuInner-link" href="./favorites.html">Favoritos</a></li>
                         <li class="menuInner_list"> <a class="menuInner-link" href="./gifos.html">Mis GIFOS</a></li>
                         <li class="menuInner_list"> <a class="menuInner-linkCreate" href="./creategif.html">Crear GIFOS</a></li>
@@ -44,12 +45,19 @@
                         <br/>(sólo necesitas una cámara para grabar un video)
                     </p>
                 </div>
+                <div class="access hidden">
+                    <h2 class="access__cam">¿Nos das acceso a tu cámara?</h2>
+                    <p class="access__cam--paragraph">El acceso a tu camara será válido sólo 
+                    </br>por el tiempo en el que estés creanDo el GIFO
+                    </p>
+                </div>
                 <div class="creating__options">
                     <div class="creating__options--circle">
                         <p class="creating__options--circle--number">1</p>
                     </div>
                     <div class="creating__options--circle">
                         <p class="creating__options--circle--number">2</p>
+
                     </div>
                     <div class="creating__options--circle">
                         <p class="creating__options--circle--number">3</p>
@@ -62,7 +70,7 @@
                 <div class="creating__button">
                     <button class="creating__button--start">COMENZAR</button>
                 </div>
-                <video class="video" src=""></video>
+                <video class="video"></video>
             </section>
             <section class="gifos">
                 <h2 class="gifos-title">Trending GIFOS</h2>
@@ -86,6 +94,7 @@
                 <p class="end-author">© GIFOS 2020 All Rights Reserved.</p>
             </div>
         </footer>
+        <script type="module" src="./scripts/darkMode.js"></script>
         <script type='module' src="./scripts/video.js"></script>
         <!--<script type="module" src="./scripts/main.js"></script>-->
     </body>

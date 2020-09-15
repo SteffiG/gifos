@@ -22,7 +22,8 @@
             </div>
             <nav class="menu">
                 <ul class="menuInner">
-                    <li class="menuInner_list"><a class="menuInner-link_style" href="#">Modo Nocturno</a></li>
+                    <li class="menuInner_list"> <a class="menuInner-link_style dark" href="#">Modo Nocturno</a></li>
+                    <li class="menuInner_list"> <a class="menuInner-link_style light hidden" href="#">Modo Diurno</a></li>
                     <li class="menuInner_list"><a class="menuInner-link" href="./favorites.html">Favoritos</a></li>
                     <li class="menuInner_list"><a class="menuInner-link" href="./gifos.html">Mis GIFOS</a></li>
                     <li class="menuInner_list"> <a class="menuInner-linkCreate" href="./creategif.html">Crear GIFOS</a></li>
@@ -32,7 +33,7 @@
         </div>
     </header>
     <main>
-        <section class="gifs hidden">
+        <section class="gifs">
             <img class="gifs-logo" src="./assets/icon-favoritos.svg" alt="heart-favorites">
             <p class="gifs-paragraph">Favoritos</p>
         </section>
@@ -40,20 +41,18 @@
             <img src="./assets/icon-favoritos.svg" class="heart" alt="heart-favorites">
             <p class="favorites__withoutResults--paragraph">"¡Guarda tu primer GIFO en Favoritos para que se muestre aquí!"</p>
         </section>
-        <section class="view hidden">
+        <section class="view">
             <div class="view-section_img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
-                <img class="img-gif" src="https://via.placeholder.com/156x120" alt="img">
+                <a href='#/' id="${id}" class="card-gif_link hidden heart-fav">
+                    <img class="icon-fav" src="${baseUrl}${srcHeart}" alt="favorites">
+                  </a>
+                  <a href='${url}' class="card-gif_link hidden" download>
+                    <img class="icon-download" src="./assets/icon-download.svg" alt="download">
+                  </a>
+                  <a href="" class="card-gif_link hidden">
+                    <img class="icon-max" src="./assets/icon-max.svg" alt="max">
+                  </a>
+                  <div class="overlay"></div>
             </div>
             <div class="button">
                 <button class="button-more">VER MÁS</button>
@@ -81,6 +80,7 @@
             <p class="end-author">© GIFOS 2020 All Rights Reserved.</p>
         </div>
     </footer>
+    <script type="module" src="./scripts/darkMode.js"></script>
     <script type="module" src="./scripts/favorites.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
