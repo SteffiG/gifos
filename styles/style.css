@@ -1184,6 +1184,43 @@ input[type=text] {
   border: 1px solid #572EE5;
 }
 
+.creating__written--border {
+  width: 8px;
+  height: 8px;
+}
+
+.creating__written .left__up {
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  position: absolute;
+  top: 26.5%;
+  left: 15%;
+}
+
+.creating__written .right__up {
+  border-top: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+  position: absolute;
+  top: 26.5%;
+  right: 15%;
+}
+
+.creating__written .left__down {
+  border-bottom: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  position: absolute;
+  bottom: 41%;
+  left: 15%;
+}
+
+.creating__written .right__down {
+  border-bottom: 1px solid #50E3C2;
+  border-right: 1px solid #50E3C2;
+  position: absolute;
+  bottom: 41%;
+  right: 15%;
+}
+
 .creating__written--title {
   padding: 1em;
   font-family: "Montserrat", sans-serif;
@@ -1207,6 +1244,11 @@ input[type=text] {
   line-height: 20px;
   margin: 0;
   padding-bottom: 1em;
+}
+
+.creating__written--paragraph .breakpoint::before {
+  content: '\A';
+  white-space: pre;
 }
 
 .creating__written::after {

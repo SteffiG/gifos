@@ -21,6 +21,38 @@
         align-items: center;
         width: 80%;
         border: 1px solid #572EE5;
+        &--border {
+            width: 8px;
+            height: 8px;
+        }
+        .left__up {
+            border-top: 1px solid #50E3C2;
+            border-left: 1px solid #50E3C2;
+            position: absolute;
+            top: 26.5%;
+            left: 15%;
+        }
+        .right__up {
+            border-top: 1px solid #50E3C2;
+            border-right: 1px solid #50E3C2;
+            position: absolute;
+            top: 26.5%;
+            right: 15%;
+        }
+        .left__down {
+            border-bottom: 1px solid #50E3C2;
+            border-left: 1px solid #50E3C2;
+            position: absolute;
+            bottom: 41%;
+            left: 15%;
+        }
+        .right__down {
+            border-bottom: 1px solid #50E3C2;
+            border-right: 1px solid #50E3C2;
+            position: absolute;
+            bottom: 41%;
+            right: 15%;
+        }
         &--title {
             padding: 1em;
             font-family: $mont;
@@ -42,9 +74,12 @@
             line-height: 20px;
             margin: 0;
             padding-bottom: 1em;
+            .breakpoint::before {
+                content: '\A';
+                white-space: pre;
+            }
         }
     }
-    //Cambiarlo a relativo a la seccion y modificar los @media
     &__written::after {
         content: "";
         position: absolute;
