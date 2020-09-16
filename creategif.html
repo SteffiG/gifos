@@ -40,6 +40,11 @@
                     <img class="creating__cam--light"  src="./assets/element-luz-camara.svg" alt="luz-camara">
                 </div>
                 <div class="creating__written">
+                    <div class="creating__written--border left__up"></div>
+                    <div class="creating__written--border right__up"></div>
+                    <div class="creating__written--border left__down"></div>
+                    <div class="creating__written--border right__down"></div>
+                    <video class="video hidden"></video>
                     <h2 class="creating__written--title">Aquí podrás </br> crear tus propios <span class="creating__written--titleDecoration">GIFOS</span></h2>
                     <p class="creating__written--paragraph">¡Crea tu GIFO en sólo 3 pasos!
                         <br/>(sólo necesitas una cámara para grabar un video)
@@ -68,9 +73,11 @@
                     <img src="./assets/pelicula-modo-noc.svg" alt="pelicula-nocturno" class="creating__film--night">
                 </div>
                 <div class="creating__button">
-                    <button class="creating__button--start">COMENZAR</button>
+                    <button class="creating__button--options start">COMENZAR</button>
+                    <button class="creating__button--options record hidden">GRABAR</button>
+                    <button class="creating__button--options finish hidden">FINALIZAR</button>
+                    <button class="creating__button--options upGifo hidden">SUBIR GIFO</button>
                 </div>
-                <video class="video"></video>
             </section>
             <section class="gifos">
                 <h2 class="gifos-title">Trending GIFOS</h2>

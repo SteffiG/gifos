@@ -2,6 +2,7 @@
 @import 'media.scss';
 
 .creating {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,17 +45,15 @@
         }
     }
     //Cambiarlo a relativo a la seccion y modificar los @media
-    /*&__written::after {
+    &__written::after {
         content: "";
         position: absolute;
-        width: 80%;
-        top: 94%;
-        //position: relative;
+        top: 85%;
         width: 80%;
         height: 7px;
         background-color: #572EE5;
         bottom: 0;
-    }*/
+    }
     &__options {
         display: flex;
         flex-direction: row;
@@ -85,9 +84,8 @@
         }
     }
     &__button {
-        position: relative;
         padding: 20px 0;
-        &--start {
+        &--options {
             border: 1px solid #572EE5;
             border-radius: 25px;
             border-radius: 25px;
@@ -101,15 +99,4 @@
             background: white;
         }
     }
-}
-
-.creating::after {
-    content: "";
-    position: absolute;
-    top: 115%;
-    //position: relative;
-    width: 90%;
-    height: 7px;
-    background-color: #572EE5;
-    bottom: 0;   
 }

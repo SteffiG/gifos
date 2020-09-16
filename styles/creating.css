@@ -17,8 +17,8 @@
   .container .search .search-container .search-input {
     width: 420px;
   }
-  .creating__written::before {
-    top: 86%;
+  .creating__written::after {
+    top: 104%;
   }
   .view-section_img {
     -webkit-box-orient: horizontal;
@@ -290,6 +290,10 @@
   .creating__written--paragraph {
     font-size: 16px;
   }
+  .creating__written::after {
+    top: 90%;
+    width: 65%;
+  }
   .creating__options {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
@@ -300,6 +304,8 @@
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: film;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .creating__button {
     -ms-grid-row: 3;
@@ -308,19 +314,12 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  .creating__written::before {
-    top: 73%;
-    width: 60%;
-  }
 }
 
 @media screen and (min-width: 1440px) {
   .creating {
     -ms-grid-columns: 220px 688px 220px;
         grid-template-columns: 220px 688px 220px;
-  }
-  .creating__written::before {
-    width: 55%;
   }
   .creating__film {
     -ms-grid-column-align: end;
@@ -330,9 +329,13 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  .creating::after {
+    width: 80%;
+  }
 }
 
 .creating {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,17 +346,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  /*&__written::after {
-        content: "";
-        position: absolute;
-        width: 80%;
-        top: 94%;
-        //position: relative;
-        width: 80%;
-        height: 7px;
-        background-color: #572EE5;
-        bottom: 0;
-    }*/
 }
 
 .creating__cam {
@@ -414,6 +406,16 @@
   padding-bottom: 1em;
 }
 
+.creating__written::after {
+  content: "";
+  position: absolute;
+  top: 85%;
+  width: 80%;
+  height: 7px;
+  background-color: #572EE5;
+  bottom: 0;
+}
+
 .creating__options {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,11 +459,10 @@
 }
 
 .creating__button {
-  position: relative;
   padding: 20px 0;
 }
 
-.creating__button--start {
+.creating__button--options {
   border: 1px solid #572EE5;
   border-radius: 25px;
   border-radius: 25px;
@@ -473,15 +474,5 @@
   letter-spacing: 0;
   text-align: center;
   background: white;
-}
-
-.creating::after {
-  content: "";
-  position: absolute;
-  top: 115%;
-  width: 90%;
-  height: 7px;
-  background-color: #572EE5;
-  bottom: 0;
 }
 /*# sourceMappingURL=creating.css.map */

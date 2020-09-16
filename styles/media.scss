@@ -21,10 +21,6 @@
             }
         }
     }
-    
-    .creating::after {
-        top: 105%;
-    }
 
     .view {
         &-section_img {
@@ -215,22 +211,25 @@
                 
             }
         }
+        &__written::after {
+            top: 83%;
+            width: 65%;
+        }
         &__options {
             grid-area: options;
             padding: 24px 0 19px 0;
         }
         &__film {
             grid-area: film;
+            justify-self: center;
         }
+
         &__button {
             grid-area: btn;
             justify-self: center;
         }
     }
-    .creating::after {
-        top: 73%;
-        width: 60%;
-    }
+    
 }
 
 @media screen and (min-width: 1440px) {
@@ -242,9 +241,8 @@
         &__button {
             justify-self: center;
         }
-    }
-    .creating::after {
-        text-align: center;
-        width: 80%;
+        &__written::after {
+            width: 55%;
+        } 
     }
 }
