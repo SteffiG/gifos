@@ -21,6 +21,26 @@
             }
         }
     }
+    .creating {
+        &__written {
+            .left__up {
+                top: 28%;
+                left: 13%;
+            }
+            .right__up {
+                top: 28%;
+                right: 13%;
+            }
+            .left__down {
+                bottom: 43%;
+                left: 13%;
+            }
+            .right__down {
+                bottom: 43%;
+                right: 13%;
+            }
+        }
+    }
 
     .view {
         &-section_img {
@@ -124,6 +144,35 @@
         }
     }
 
+    .creating {
+        &__written {
+            height: 390px;
+            &--border {
+                width: 20px;
+                height: 20px;
+            }
+            .left__up {
+                top: 23%;
+                left: 12%;
+            }
+            .right__up {
+                top: 23%;
+                right: 12%;
+            }
+            .left__down {
+                bottom: 35%;
+                left: 12%;
+            }
+            .right__down {
+                bottom: 35%;
+                right: 12%;
+            }
+        }
+        &__line::after {
+            top: 88%;
+        }
+    }
+
     .oscuro {
         @include header-desktop();
     }
@@ -201,6 +250,22 @@
             max-width: 688px;
             height: 386px;
             justify-self: center;
+            .left__up {
+                top: 3%;
+                left: 23%;
+            }
+            .right__up {
+                top: 3%;
+                right: 23%;
+            }
+            .left__down {
+                bottom: 33%;
+                left: 23%;
+            }
+            .right__down {
+                bottom: 33%;
+                right: 23%;
+            }
             &--title {
                 padding: 134px 68px 3px 70px;
                 font-size: 25px;
@@ -211,10 +276,6 @@
                 
             }
         }
-        &__written::after {
-            top: 83%;
-            width: 65%;
-        }
         &__options {
             grid-area: options;
             padding: 24px 0 19px 0;
@@ -222,6 +283,11 @@
         &__film {
             grid-area: film;
             justify-self: center;
+        }
+        &__line::after {
+            top: 83%;
+            width: 64%;
+            left: 18%;
         }
 
         &__button {
@@ -238,11 +304,12 @@
         &__film {
             justify-self: end;
         }
+        &__line::after {
+            width: 54%;
+            left: 23%;
+        }
         &__button {
             justify-self: center;
         }
-        &__written::after {
-            width: 55%;
-        } 
     }
 }

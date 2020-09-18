@@ -17,6 +17,22 @@
   .container .search .search-container .search-input {
     width: 420px;
   }
+  .creating__written .left__up {
+    top: 28%;
+    left: 13%;
+  }
+  .creating__written .right__up {
+    top: 28%;
+    right: 13%;
+  }
+  .creating__written .left__down {
+    bottom: 43%;
+    left: 13%;
+  }
+  .creating__written .right__down {
+    bottom: 43%;
+    right: 13%;
+  }
   .view-section_img {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -178,6 +194,32 @@
     width: 357px;
     height: 275px;
   }
+  .creating__written {
+    height: 390px;
+  }
+  .creating__written--border {
+    width: 20px;
+    height: 20px;
+  }
+  .creating__written .left__up {
+    top: 23%;
+    left: 12%;
+  }
+  .creating__written .right__up {
+    top: 23%;
+    right: 12%;
+  }
+  .creating__written .left__down {
+    bottom: 35%;
+    left: 12%;
+  }
+  .creating__written .right__down {
+    bottom: 35%;
+    right: 12%;
+  }
+  .creating__line::after {
+    top: 88%;
+  }
   .oscuro .init-navigation {
     background: #37383C;
   }
@@ -279,6 +321,22 @@
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  .creating__written .left__up {
+    top: 3%;
+    left: 23%;
+  }
+  .creating__written .right__up {
+    top: 3%;
+    right: 23%;
+  }
+  .creating__written .left__down {
+    bottom: 33%;
+    left: 23%;
+  }
+  .creating__written .right__down {
+    bottom: 33%;
+    right: 23%;
+  }
   .creating__written--title {
     padding: 134px 68px 3px 70px;
     font-size: 25px;
@@ -286,10 +344,6 @@
   }
   .creating__written--paragraph {
     font-size: 16px;
-  }
-  .creating__written::after {
-    top: 83%;
-    width: 65%;
   }
   .creating__options {
     -ms-grid-row: 2;
@@ -303,6 +357,11 @@
     grid-area: film;
     -ms-grid-column-align: center;
         justify-self: center;
+  }
+  .creating__line::after {
+    top: 83%;
+    width: 64%;
+    left: 18%;
   }
   .creating__button {
     -ms-grid-row: 3;
@@ -322,12 +381,13 @@
     -ms-grid-column-align: end;
         justify-self: end;
   }
+  .creating__line::after {
+    width: 54%;
+    left: 23%;
+  }
   .creating__button {
     -ms-grid-column-align: center;
         justify-self: center;
-  }
-  .creating__written::after {
-    width: 55%;
   }
 }
 /*# sourceMappingURL=media.css.map */

@@ -50,28 +50,25 @@
                         <br/>(sólo necesitas una cámara <span class="breakpoint">para grabar un video)</span>
                     </p>
                 </div>
-                <!--<div class="access hidden">
-                    <h2 class="access__cam">¿Nos das acceso a tu cámara?</h2>
-                    <p class="access__cam--paragraph">El acceso a tu camara será válido sólo 
-                    </br>por el tiempo en el que estés creanDo el GIFO
-                    </p>
-                </div>-->
                 <div class="creating__options">
                     <div class="creating__options--circle">
-                        <p class="creating__options--circle--number">1</p>
+                        <p class="number">1</p>
                     </div>
                     <div class="creating__options--circle">
-                        <p class="creating__options--circle--number">2</p>
+                        <p class="number">2</p>
 
                     </div>
                     <div class="creating__options--circle">
-                        <p class="creating__options--circle--number">3</p>
-                </div>
+                        <p class="number">3</p>
+                    </div>
+                    <p class="creating__options--timer hidden"></p>
+                    <p class="creating__options--repeat hidden">REPETIR CAPTURA</p>
                 </div>
                 <div class="creating__film">
                     <img src="./assets/pelicula.svg" alt="pelicula" class="creating__film--day">
                     <img src="./assets/pelicula-modo-noc.svg" alt="pelicula-nocturno" class="creating__film--night">
                 </div>
+                <div class="creating__line"></div>
                 <div class="creating__button">
                     <button class="creating__button--options start">COMENZAR</button>
                     <button class="creating__button--options record hidden">GRABAR</button>
@@ -102,6 +99,7 @@
             </div>
         </footer>
         <script type="module" src="./scripts/darkMode.js"></script>
+        <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
         <script type='module' src="./scripts/video.js"></script>
         <!--<script type="module" src="./scripts/main.js"></script>-->
     </body>
