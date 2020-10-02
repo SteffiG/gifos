@@ -314,6 +314,7 @@
 }
 
 .container .searchGif {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,12 +328,33 @@
   width: 100%;
 }
 
-.container .searchGif .searchName {
-  text-align: center;
-  font-size: 3em;
+.container .searchGif_results-line {
+  opacity: 0.5;
+  border: 1px solid #9CAFC3;
 }
 
-.container .searchGif-img {
+.container .searchGif_name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.container .searchGif_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .searchGif_container-img {
   width: 156px;
   height: 120px;
   margin-bottom: 21px;

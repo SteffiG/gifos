@@ -6,7 +6,7 @@ import capitalize from './helpers.js';
 
 
 const searchGif = document.querySelector(".search-input");
-const containerGif = document.querySelector('.searchGif');
+const containerGif = document.querySelector('.searchGif_container');
 
 //SEARCH GIF
 /**
@@ -22,17 +22,24 @@ function search(value) {
     return response.json();
   })
   .then((json) => {
-    let imagesGif = json.data;  
-    containerGif.innerHTML = '';
+    let imagesGif = json.data;
+    //containerGif.innerHTML = '';
     for(let i = 0 ; i < imagesGif.length; i++ ){
       let node = document.createElement('img');
       node.src = imagesGif[i].images.downsized.url;
-      node.className = 'searchGif-img';
+      node.className = 'searchGif_container-img';
       containerGif.appendChild(node);
     }
+    show();
   }).catch((error) => {return error})
 }
 
+function show() {
+  document.querySelector(".searchGif").classList.remove('hidden');
+  document.querySelector(".searchGif_name").classList.remove('hidden');
+  document.querySelector(".searchGif_name").innerHTML = capitalize(myInput.value);
+  document.querySelector(".search-without-results").classList.add("hidden");
+}
 
 //------------------------------------------------------------------
 //AUTOCOMPLETE

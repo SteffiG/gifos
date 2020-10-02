@@ -1,3 +1,5 @@
+import api from './services.js';
+
 /**
  * GLOBAL VARIABLES
  */
@@ -9,10 +11,12 @@ const up = document.querySelector('.upGifo');
 const circle = document.getElementsByClassName('creating__options--circle');
 const title = document.querySelector('.creating__written--title');
 const paragraph = document.querySelector('.creating__written--paragraph');
-const timer = document.querySelector('.creating__options--timer');
-const repeat = document.querySelector('.creating__options--repeat');
-let constraints = { audio: false,  video: {width: 480,height: 320 }}
+const timer = document.querySelector('.creating__timer');
+const repeat = document.querySelector('.creating__repeat');
+let constraints = { audio: false,  video: { width: 480, height: 320 }}
 let initTime, idInterval;
+
+up.addEventListener('click', load);
 
 /**
  * @method startVideo
@@ -62,6 +66,8 @@ async function getStreamAndRecord() {
  */
 
 function videoGif(stream) {
+  title.classList.add('hidden');
+  paragraph.classList.add('hidden');
   video.classList.remove('hidden');
   video.srcObject = stream;
   video.play()
@@ -110,6 +116,8 @@ function recording(recorder) {
  * @description - function that stop the recorder 
  */
 
+let infoGif; 
+
 function stopRecording(recorder) {
   stopCount();
   timer.classList.add('hidden');
@@ -120,6 +128,7 @@ function stopRecording(recorder) {
     let form = new FormData();
     form.append('file', recorder.getBlob(), 'myGif.gif');
     console.log(form.get('file'))
+    infoGif = form;
   })
   //video.srcObject = null;
   recorder.camera.stop();
@@ -169,6 +178,23 @@ function repeatVideoGif() {
   repeat.classList.add('hidden');
   up.classList.add('hidden');
   getStreamAndRecord(); 
+}
+
+function load() {
+  loadVideoGif();
+  api.uploadGif()
+  .then((json) => {
+    console.log(json);
+  })
+  console.log('hii');
+  
+}
+
+function loadVideoGif() {
+  repeat.classList.add('hidden');
+  up.classList.add('hidden');
+  circle[1].classList.add('active');
+  circle[2].classList.add('active');
 }
 
 /**

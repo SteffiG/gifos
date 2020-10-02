@@ -603,6 +603,7 @@ body {
 }
 
 .container .searchGif {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,12 +617,33 @@ body {
   width: 100%;
 }
 
-.container .searchGif .searchName {
-  text-align: center;
-  font-size: 3em;
+.container .searchGif_results-line {
+  opacity: 0.5;
+  border: 1px solid #9CAFC3;
 }
 
-.container .searchGif-img {
+.container .searchGif_name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
+.container .searchGif_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .searchGif_container-img {
   width: 156px;
   height: 120px;
   margin-bottom: 21px;
@@ -807,6 +829,8 @@ input[type=text] {
 @media screen and (min-width: 375px) {
   .container .searchGif {
     text-align: center;
+  }
+  .container .searchGif_container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -815,7 +839,7 @@ input[type=text] {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .container .searchGif-img {
+  .container .searchGif_container-img {
     width: 156px;
     height: 120px;
     margin: 0 10px 25px 10px;
@@ -961,7 +985,15 @@ input[type=text] {
   .container .search {
     width: 551px;
   }
-  .container .searchGif-img {
+  .container .searchGif_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  .container .searchGif_container-img {
     max-width: 200px;
     height: 150px;
   }
@@ -999,9 +1031,6 @@ input[type=text] {
   .gifos .card .card-container .card-gif {
     width: 357px;
     height: 275px;
-  }
-  .creating__written {
-    height: 390px;
   }
   .creating__written--border {
     width: 20px;
@@ -1093,8 +1122,8 @@ input[type=text] {
   .init-navigation .logo_mobile {
     padding: 18px 0 12px 156px;
   }
-  .container .searchGif-img {
-    width: 300px;
+  .container .searchGif_container-img {
+    width: 260px;
     height: 200px;
   }
   .creating {
@@ -1241,6 +1270,7 @@ input[type=text] {
       -ms-flex-align: center;
           align-items: center;
   width: 80%;
+  height: 300px;
   border: 1px solid #572EE5;
 }
 
@@ -1350,6 +1380,16 @@ input[type=text] {
 
 .creating__options .active .number {
   color: white;
+}
+
+.creating .creating__timer--repeat .creating__repeat {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  border-bottom: 2px solid #5ED7C6;
 }
 
 .creating__film {
@@ -1571,6 +1611,8 @@ input[type=text] {
 @media screen and (min-width: 375px) {
   .container .searchGif {
     text-align: center;
+  }
+  .container .searchGif_container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -1579,7 +1621,7 @@ input[type=text] {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .container .searchGif-img {
+  .container .searchGif_container-img {
     width: 156px;
     height: 120px;
     margin: 0 10px 25px 10px;
@@ -1725,7 +1767,15 @@ input[type=text] {
   .container .search {
     width: 551px;
   }
-  .container .searchGif-img {
+  .container .searchGif_container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  .container .searchGif_container-img {
     max-width: 200px;
     height: 150px;
   }
@@ -1763,9 +1813,6 @@ input[type=text] {
   .gifos .card .card-container .card-gif {
     width: 357px;
     height: 275px;
-  }
-  .creating__written {
-    height: 390px;
   }
   .creating__written--border {
     width: 20px;
@@ -1857,8 +1904,8 @@ input[type=text] {
   .init-navigation .logo_mobile {
     padding: 18px 0 12px 156px;
   }
-  .container .searchGif-img {
-    width: 300px;
+  .container .searchGif_container-img {
+    width: 260px;
     height: 200px;
   }
   .creating {

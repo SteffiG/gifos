@@ -22,6 +22,14 @@ const api = {
             .then((response) => resolve(response.json()))
             .catch((error) => reject(error))
         })
+    }),
+
+    uploadGif: ((infoGif) => {
+        return new Promise((resolve, reject) => {
+            fetch('https://upload.giphy.com/v1/gifs?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs', { method: 'POST', body: infoGif })
+                .then(response => { resolve(response.json()) })
+                .catch(error => { reject(error) })
+        });
     })
 }
 

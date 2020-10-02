@@ -26,7 +26,7 @@ function trendingSearch() {
 trendingSearch();
 
 const markUp = ((word, url) => {
-  return (`<li class="trending_topics-words-list"><a href='${url}' class="topic_list">${capitalize(word)}</a></li>`);
+  return (`<li class="trending_topics-words-list"><a href='#search' class="topic_list">${capitalize(word)}</a></li>`);
 });
 
 //FAVORITES
