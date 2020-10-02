@@ -1311,6 +1311,10 @@ input[type=text] {
   right: 15%;
 }
 
+.creating__written .video {
+  padding: 2em;
+}
+
 .creating__written--title {
   padding: 1em;
   font-family: "Montserrat", sans-serif;
