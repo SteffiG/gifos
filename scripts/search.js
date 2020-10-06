@@ -78,6 +78,21 @@ function getAutocomplete() {
   }).catch((error) => {return error})
 }
 
+/*const state = (() => {
+  if(searchGif == '') {
+    document.querySelector('.search-icon-left').classList.add('hidden');
+    document.querySelector('.search-icon-right').classList.remove('hidden');
+    document.querySelector('.close-icon').classList.add('hidden');
+  }
+  else {
+    document.querySelector('.search-icon-left').classList.remove('hidden');
+    document.querySelector('.search-icon-right').classList.add('hidden');
+    document.querySelector('.close-icon').classList.remove('hidden');
+  }
+});
+
+state();
+*/
 function closeAllLists(elmnt) {
   /*close all autocomplete lists in the document,
   except the one passed as an argument:*/
