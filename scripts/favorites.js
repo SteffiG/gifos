@@ -1,20 +1,18 @@
+//import markUpGifTrending from './main.js';
+
+//markUpGifTrending();
+
 function createFavorites() {
   const arrLocal = recover();
-  console.log(arrLocal);
-  const container = document.querySelector('.view');
   const  viewFavorites = document.querySelector('.view-section_img');
-  console.log(viewFavorites);
   for(let i in arrLocal) {
-    /*let image = arrLocal[i];
-    console.log(arrLocal[i]);*/
     let gifFavorite = document.createElement('img');
     gifFavorite.src = arrLocal[i];
-    console.log(gifFavorite.src);
     gifFavorite.className = 'img-gif';
     viewFavorites.appendChild(gifFavorite);
   }
 }
-
+/*
 const markUpGifFavorite = ((url, id, srcHeart) => {
   const baseUrl = window.location.origin;
   return (`<img src='${url}' alt="gifs" class="card-gif">
@@ -29,7 +27,7 @@ const markUpGifFavorite = ((url, id, srcHeart) => {
     </a>
     <div class="overlay"></div>`
   );
-});
+});*/
 
 function recover() {
   return JSON.parse(localStorage.getItem('favorites'));

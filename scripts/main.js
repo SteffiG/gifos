@@ -3,13 +3,14 @@
  */
 import api from './services.js';
 import capitalize  from './helpers.js';
-
+import search from './search.js';
 /**
  * Global variables
  */
 const trendingWords = document.querySelector(".trending_topics-words");
 let gif = '';
 let item = '';
+let currentPage = 0;
 
 //TRENDING SEARCH
 function trendingSearch() {
@@ -19,15 +20,26 @@ function trendingSearch() {
     info.forEach(word => {
     item += markUp(word);
     trendingWords.innerHTML = item;
+    //Verificar porque no me coloca el value en la barra de busqueda y que no me realiza dicha busqueda
+    trendingWords.querySelectorAll('.trending_topics-words-list').forEach((element) => element.addEventListener('click', selectedSuggestion));
     })
   })
   .catch((error) => {return error})
 }
 trendingSearch();
 
-const markUp = ((word, url) => {
+const markUp = ((word) => {
   return (`<li class="trending_topics-words-list"><a href='#search' class="topic_list">${capitalize(word)}</a></li>`);
 });
+
+const searchGif = document.querySelector(".search-input");
+
+function selectedSuggestion(event) {
+  //currentPage = 0;
+  searchGif.value = event.target.innertText;
+  console.log(event.target);
+  search();
+}
 
 //FAVORITES
 function addFavorites(favorite, id) {
@@ -80,6 +92,7 @@ function getTrendingGifos() {
     });
   }).catch((error) => {return(error)})
 }
+
 const markUpGifTrending = ((url, id, srcHeart) => {
   const baseUrl = window.location.origin;
 
@@ -98,4 +111,5 @@ const markUpGifTrending = ((url, id, srcHeart) => {
     </div>`
   );
 });
+
 getTrendingGifos();

@@ -4,7 +4,6 @@
 
 import capitalize from './helpers.js';
 
-
 const searchGif = document.querySelector(".search-input");
 const containerGif = document.querySelector('.searchGif_container');
 
@@ -23,7 +22,7 @@ function search(value) {
   })
   .then((json) => {
     let imagesGif = json.data;
-    //containerGif.innerHTML = '';
+    containerGif.innerHTML = '';
     for(let i = 0 ; i < imagesGif.length; i++ ){
       let node = document.createElement('img');
       node.src = imagesGif[i].images.downsized.url;
@@ -60,14 +59,13 @@ function getAutocomplete() {
     let a, b, i, val = that.value;
     let arr = json.data;
     a = document.querySelector(".search-autocomplete_list");
+    a.classList.remove('hidden');
     a.setAttribute("id", that.id + "autocomplete_list");
     a.setAttribute("class", "search-autocomplete_list");
     for ( i = 0; i < arr.length; i++) {
       b = document.querySelector(".search-autocomplete_items");
-      b.innerHTML = `<strong> ${capitalize(arr[i].name.substr(0, val.length))}</strong>`;
-      //b += markUpComplete(arr[i].name.substr(0, val.length));
-      //console.log(b);
-      b.innerHTML += arr[i].name.substr(val.length);
+      let wordCompleteSearch = arr[i].name.substr(val.length);
+      b.innerHTML = `<a class="autocomplete-selected"><i class="fas fa-search"></i><strong> ${capitalize(arr[i].name.substr(0, val.length))}</strong>${wordCompleteSearch}</a>`;
       b.innerHTML += `<input type='hidden' value='${arr[i].name}'>`;
       b.addEventListener("click", function(e) {
       //Llamo la funcion search
@@ -79,46 +77,6 @@ function getAutocomplete() {
     }
   }).catch((error) => {return error})
 }
-
-const markUpComplete = ((word) => {
-  return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search"></i><strong>${capitalize(word)}</strong></a></li>`)
-});
-
-/*execute a function presses a key on the keyboard:*/
-/*inp.addEventListener("keydown", function(e) {
-    var x = document.getElementById(this.id + "autocomplete-list");
-    if (x) x = x.getElementsByTagName("div");
-    if (e.keyCode == 40) {
-      /*If the arrow DOWN key is pressed,
-      increase the currentFocus variable:*/
-    //  currentFocus++
-      /*and and make the current item more visible:*/
-    //  addActive(x);
-    //} else if (e.keyCode == 38) { //up
-      /*If the arrow UP key is pressed,
-      decrease the currentFocus variable:*/
-    //  currentFocus--;
-      /*and and make the current item more visible:*/
-    //  addActive(x);
-    //} else if (e.keyCode == 13) {
-      /*If the ENTER key is pressed, prevent the form from being submitted,*/
-    /*  e.preventDefault();
-      if (currentFocus > -1) {
-        /*and simulate a click on the "active" item:
-        if (x) x[currentFocus].click();
-      }
-    }
-});*/
-
-/*const listMarkUp = (topic => {
-    return (`<li class="search-autocomplete_items"><a class="autocomplete-selected"><i class="fas fa-search">${capitalize(topic)}</i></a></li>`);
-});
-*/
-
-//const removeElements = (elms) => elms.forEach(el => el.remove());
-
-// Use like:
-//removeElements( document.querySelectorAll(".remove"));
 
 function closeAllLists(elmnt) {
   /*close all autocomplete lists in the document,
@@ -134,3 +92,5 @@ function closeAllLists(elmnt) {
 */
 
 searchGif.addEventListener('input', getAutocomplete);
+
+export default search; 
