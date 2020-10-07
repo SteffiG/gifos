@@ -59,6 +59,19 @@
                 opacity: 0;
                 transition: .5s ease;
                 background-color: #572EE5;
+                .information__gif {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    &--user {
+                        font-size: 1em;
+                        color: white;
+                    }
+                    &--title {
+                        font-size: 1em;
+                        color:  white;
+                    }
+                }
             }
         }
         .card-container:hover {

@@ -54,11 +54,11 @@ body {
   color: white;
 }
 
-.oscuro .container .search .search-container .search-icon {
+.oscuro .container .search .search-container .search-icon-right {
   background-color: #37383C;
 }
 
-.oscuro .container .search .search-container .search-icon .fa-search {
+.oscuro .container .search .search-container .search-icon-right .fa-search {
   color: white;
 }
 
@@ -171,6 +171,7 @@ body {
 }
 
 .init-navigation .logo_mobile {
+  width: 3em;
   padding: 29px 0 17.2px 22px;
 }
 
@@ -1500,6 +1501,29 @@ body {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   background-color: #572EE5;
+}
+
+.gifos .card .card-container .overlay .information__gif {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.gifos .card .card-container .overlay .information__gif--user {
+  font-size: 1em;
+  color: white;
+}
+
+.gifos .card .card-container .overlay .information__gif--title {
+  font-size: 1em;
+  color: white;
 }
 
 .gifos .card .card-container:hover {

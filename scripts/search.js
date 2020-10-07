@@ -22,6 +22,7 @@ function search(value) {
   })
   .then((json) => {
     let imagesGif = json.data;
+    console.log(imagesGif);
     containerGif.innerHTML = '';
     for(let i = 0 ; i < imagesGif.length; i++ ){
       let node = document.createElement('img');
@@ -93,6 +94,7 @@ function getAutocomplete() {
 
 state();
 */
+
 function closeAllLists(elmnt) {
   /*close all autocomplete lists in the document,
   except the one passed as an argument:*/

@@ -64,7 +64,7 @@ function getTrendingGifos() {
   .then(async (json) => {
     let images = json.data;
     let containerSlider = document.querySelector('.card');
-
+    console.log(images);
     for(let i = 0 ; i < images.length; i++){
       let image = await fetch(images[i].images.downsized.url);
       let imageConverted = await image.blob();
@@ -93,7 +93,7 @@ function getTrendingGifos() {
   }).catch((error) => {return(error)})
 }
 
-const markUpGifTrending = ((url, id, srcHeart) => {
+const markUpGifTrending = ((url, id, srcHeart, user, title) => {
   const baseUrl = window.location.origin;
 
   return (`<div class="card-container">
@@ -107,7 +107,12 @@ const markUpGifTrending = ((url, id, srcHeart) => {
     <a href="" class="card-gif_link hidden">
     <img class="icon-max" src="./assets/icon-max.svg" alt="max">
     </a>
-    <div class="overlay"></div>
+    <div class="overlay">
+      <div class="information__gif">
+      <p class="information__gif--user">${user}</p>
+      <p class="information__gif--title">${title}</p>
+      </div>
+    </div>
     </div>`
   );
 });

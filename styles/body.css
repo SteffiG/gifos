@@ -54,11 +54,11 @@ body {
   color: white;
 }
 
-.oscuro .container .search .search-container .search-icon {
+.oscuro .container .search .search-container .search-icon-right {
   background-color: #37383C;
 }
 
-.oscuro .container .search .search-container .search-icon .fa-search {
+.oscuro .container .search .search-container .search-icon-right .fa-search {
   color: white;
 }
 
