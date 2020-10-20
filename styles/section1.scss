@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'gifs.scss';
+@import 'mixins.scss';
 
 .container {    
   display: flex;
@@ -153,15 +154,34 @@
       text-align: center;
       line-height: 30px;
     }    
-    &_container{
+    .containerGif {
       display: flex;
       flex-direction: column;
       align-items: center;
-      &-img {
-        width: 156px;
-        height: 120px;
-        margin-bottom: 21px;
+      .searchGif_container{
+        position: relative;
+        //margin: 0 0 82px 22px;
+        &-img{
+          width: 156px;
+          height: 120px;
+          //margin-bottom: 21px;
+        }
+        @include iconsGif();
       }
+      .searchGif_container:hover {
+        cursor: pointer;
+        .hidden {
+            display: block;
+        }
+        .overlay{
+            opacity: 0.6;
+        }
+        .card-gif_link {
+            .icon-fav:hover, .icon-download:hover, .icon-max:hover {
+                opacity: 1;
+            }
+        } 
+    }
     }
   }
   .button {

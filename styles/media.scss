@@ -5,13 +5,15 @@
     .container{
         .searchGif {
             text-align: center;
-            &_container {
+            .containerGif {
                 flex-flow: row wrap;
                 justify-content: center;
-                &-img { 
-                    width: 156px;
-                    height: 120px;
+                .searchGif_container{
                     margin: 0 10px 25px 10px;
+                    &-img { 
+                        width: 156px;
+                        height: 120px;
+                    }    
                 }
             }
         }
@@ -73,7 +75,18 @@
                 padding: 18px 0 12px 50px;
             }
             @include menu($margin: 0 50px 0 60px);
-            
+            .menu {
+                .menuInner {
+                    .create:hover {
+                        background: #572EE5;
+                        color: white;
+                    }
+                    .create:active {
+                        background: #9CAFC3;
+                        border: 1px solid #9CAFC3;
+                    }
+                }
+            }
         }
     }
 
@@ -94,13 +107,15 @@
             width: 551px;
         }
         .searchGif { 
-            &_container {
+            .containerGif {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
-                &-img {   
-                    max-width: 200px;
-                    height: 150px;
+                .searchGif_container {
+                    &-img {   
+                        max-width: 200px;
+                        height: 150px;
+                    }
                 }
             }  
         }
@@ -234,10 +249,12 @@
     }
     .container {
         .searchGif {  
-            &_container {
-                &-img {   
-                    width: 260px;
-                    height: 200px;
+            .containerGif {
+                .searchGif_container {
+                    &-img {   
+                        width: 260px;
+                        height: 200px;
+                    }
                 }
             } 
         }

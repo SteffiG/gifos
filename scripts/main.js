@@ -3,14 +3,14 @@
  */
 import api from './services.js';
 import capitalize  from './helpers.js';
-import search from './search.js';
+//import search from './search.js';
+
 /**
  * Global variables
  */
 const trendingWords = document.querySelector(".trending_topics-words");
 let gif = '';
 let item = '';
-let currentPage = 0;
 
 //TRENDING SEARCH
 function trendingSearch() {
@@ -35,7 +35,6 @@ const markUp = ((word) => {
 const searchGif = document.querySelector(".search-input");
 
 function selectedSuggestion(event) {
-  //currentPage = 0;
   searchGif.value = event.target.innertText;
   console.log(event.target);
   search();
@@ -64,7 +63,6 @@ function getTrendingGifos() {
   .then(async (json) => {
     let images = json.data;
     let containerSlider = document.querySelector('.card');
-    console.log(images);
     for(let i = 0 ; i < images.length; i++){
       let image = await fetch(images[i].images.downsized.url);
       let imageConverted = await image.blob();
@@ -93,19 +91,51 @@ function getTrendingGifos() {
   }).catch((error) => {return(error)})
 }
 
+/**
+ * Enlarge gif...
+ * Al dar click sobre el icono de ampliar
+ * Se me debe abrir el modal mostrando el gif grande
+ * con una X en la parte superior derecha
+ * Mostrando nombre y titulo de gif en la parte inferior izq
+ * y mostrando iconos de corazon y descaarga en la parte inferior derecha
+ */
+/*const modal = document.querySelector('#myModal')
+const img = document.querySelector('.card-gif');
+const modalImg = document.querySelector('.icon-max');
+const caption = document.querySelector('.caption');
+modalImg.addEventListener('click', gifModal)
+
+function gifModal(url) {
+  modal.style.display = 'block';
+  img.src = `${url}`;
+  caption.innerHTML = this.alt;
+}
+
+const close = document.querySelector('.close');
+close.addEventListener('click', closeModal);
+
+function closeModal() {
+  modal.style.display = 'none';
+}
+*/
+
 const markUpGifTrending = ((url, id, srcHeart, user, title) => {
   const baseUrl = window.location.origin;
 
   return (`<div class="card-container">
-    <img src='${url}' alt="gifs" class="card-gif">
+    <img src='${url}' id="${id}" alt="gifs" class="card-gif">
     <a href='#/' id="${id}" class="card-gif_link hidden heart-fav">
     <img class="icon-fav" src="${baseUrl}${srcHeart}" alt="favorites">
     </a>
     <a href='${url}' class="card-gif_link hidden" download>
     <img class="icon-download" src="./assets/icon-download.svg" alt="download">
     </a>
-    <a href="" class="card-gif_link hidden">
-    <img class="icon-max" src="./assets/icon-max.svg" alt="max">
+    <a href="${url}" class="card-gif_link hidden">
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="icon-max" src="./assets/icon-max.svg" alt="Enlarge Gif">
+    <div class="caption"></div>
+    </div>
     </a>
     <div class="overlay">
       <div class="information__gif">

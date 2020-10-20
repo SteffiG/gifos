@@ -53,14 +53,14 @@
             margin: $margin;
             padding-top: 18px;
         }
-        .create:hover {
+        /*.create:hover {
             background: #572EE5;
             color: white;
         }
         .create:active {
             background: #9CAFC3;
             border: 1px solid #9CAFC3;
-        }
+        }*/
     }
 }
 
@@ -132,6 +132,87 @@
             letter-spacing: 0;
             text-align: center;
             background: white;
+        }
+    }
+}
+
+
+@mixin iconsTrending() {
+    .card-gif_link {
+        .icon-fav{
+            @include icon($right: 90px);
+        }
+        .icon-download{
+            @include icon($right: 40px);
+            margin: 0 10px;
+        }
+        .icon-max{
+            @include icon();
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #572EE5;
+        .information__gif {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &--user {
+                font-size: 1em;
+                color: white;
+            }
+            &--title {
+                font-size: 1em;
+                color:  white;
+            }
+        }
+    }
+}
+
+@mixin iconsGif() {
+    .card-gif_link {
+        .icon-fav{
+            @include icon($right: 90px);
+        }
+        .icon-download{
+            @include icon($right: 40px);
+            margin: 0 10px;
+        }
+        .icon-max{
+            @include icon();
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: #572EE5;
+        .information__gif {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &--user {
+                font-size: 1em;
+                color: white;
+            }
+            &--title {
+                font-size: 1em;
+                color:  white;
+            }
         }
     }
 }

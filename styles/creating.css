@@ -100,6 +100,14 @@
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
+    /*.create:hover {
+            background: #572EE5;
+            color: white;
+        }
+        .create:active {
+            background: #9CAFC3;
+            border: 1px solid #9CAFC3;
+        }*/
   }
   .init-navigation .menuInner_list {
     font-family: "Montserrat", sans-serif;
@@ -135,11 +143,11 @@
     margin: 0 50px 0 60px;
     padding-top: 18px;
   }
-  .init-navigation .menuInner .create:hover {
+  .init-navigation .menu .menuInner .create:hover {
     background: #572EE5;
     color: white;
   }
-  .init-navigation .menuInner .create:active {
+  .init-navigation .menu .menuInner .create:active {
     background: #9CAFC3;
     border: 1px solid #9CAFC3;
   }
