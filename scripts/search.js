@@ -73,11 +73,7 @@ const markUpGif = ((url, id, srcHeart, user, title) => {
     <img class="icon-download" src="./assets/icon-download.svg" alt="download">
     </a>
     <a href="#" class="card-gif_link hidden">
-    <div id="myModal" class="modal">
-    <span class="close">&times;</span>
     <img class="icon-max" src="./assets/icon-max.svg" alt="Enlarge Gif">
-    <div class="caption"></div>
-    </div>
     </a>
     <div class="overlay">
       <div class="information__gif">
