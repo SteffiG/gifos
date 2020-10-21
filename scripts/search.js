@@ -132,14 +132,22 @@ function getAutocomplete() {
       b = document.querySelector(".search-autocomplete_items");
       let wordCompleteSearch = arr[i].name.substr(val.length);
       b.innerHTML = `<a class="autocomplete-selected"><i class="fas fa-search"></i><strong> ${capitalize(arr[i].name.substr(0, val.length))}</strong>${wordCompleteSearch}</a>`;
+      document.querySelector('.search-icon-left').classList.remove('hidden');
+      document.querySelector('.search-icon-right').classList.add('hidden');
+      document.querySelector('.close-icon').classList.remove('hidden');
+      const close = document.querySelector('.close-icon');
+      searchGif.style = 'margin-left: 10px';
       b.innerHTML += `<input type='hidden' value='${arr[i].name}'>`;
       b.addEventListener("click", function(e) {
       //Llamo la funcion search
         search(that.value);
         that.value = this.getElementsByTagName("input")[0].value;
         closeAllLists(that);
+        close.addEventListener('click', removeValue);
       });
       a.appendChild(b);
+      
+      
     }
     /*inp.addEventListener('keydown', function(e) {
       let x = document.getElementById(that.id + "autocomplete-list");
@@ -167,6 +175,14 @@ function getAutocomplete() {
       }
     });*/
   }).catch((error) => {return error})
+}
+
+function removeValue() {
+  searchGif.value = '';
+  document.querySelector('.search-icon-left').classList.add('hidden');
+  document.querySelector('.search-icon-right').classList.remove('hidden');
+  document.querySelector('.close-icon').classList.add('hidden');
+  searchGif.style = 'margin-left: 55px';
 }
 
 /*const state = (() => {

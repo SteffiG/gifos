@@ -50,12 +50,12 @@
       min-height: 3.125em;
       border-radius: 27px;
       .search-icon-left {
-        justify-self: flex-start;
-        margin-left: 2.5em;
         background-color: white;
         padding: 0;
         border: 27px;
         outline-color: aqua;
+        color: darkgray;
+        margin-left: 5%;
       }
       .search-input {
         width: 210px;
@@ -89,7 +89,7 @@
       width: 210px;
       align-items: flex-start;
       padding: 0;
-      margin-left: 23px;
+      margin-left: 30px;
       .search-autocomplete_items {
         list-style: none;
         margin-bottom: 10px;

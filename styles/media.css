@@ -1,4 +1,7 @@
 @media screen and (min-width: 375px) {
+  .container .search .search-container .search-icon-left {
+    margin-left: 0;
+  }
   .container .searchGif {
     text-align: center;
   }
@@ -128,6 +131,9 @@
     font-size: 13px;
     color: #572EE5;
     text-transform: uppercase;
+  }
+  .init-navigation .menuInner-link::after, .init-navigation .menuInner-link_style::after, .init-navigation .menuInner-linkCreate::after {
+    display: none;
   }
   .init-navigation .menuInner-link:hover, .init-navigation .menuInner-link_style:hover {
     border-bottom: 2px solid #5ED7C6;
