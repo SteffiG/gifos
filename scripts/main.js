@@ -3,6 +3,7 @@
  */
 import api from './services.js';
 import capitalize  from './helpers.js';
+import search from './search.js';
 //import search from './search.js';
 
 /**
@@ -35,9 +36,9 @@ const markUp = ((word) => {
 const searchGif = document.querySelector(".search-input");
 
 function selectedSuggestion(event) {
-  searchGif.value = event.target.innertText;
-  console.log(event.target);
-  search();
+  searchGif.value = event.target.innerText;
+  search(event.target.innerText);
+  //document.querySelector('.')
 }
 
 //FAVORITES
