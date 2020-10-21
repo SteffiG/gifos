@@ -2,7 +2,7 @@
   .container .searchGif {
     text-align: center;
   }
-  .container .searchGif_container {
+  .container .searchGif .containerGif {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -11,10 +11,12 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .container .searchGif_container-img {
+  .container .searchGif .containerGif .searchGif_container {
+    margin: 0 10px 25px 10px;
+  }
+  .container .searchGif .containerGif .searchGif_container-img {
     width: 156px;
     height: 120px;
-    margin: 0 10px 25px 10px;
   }
   .container .search .search-container .search-input {
     width: 420px;
@@ -165,7 +167,7 @@
   .container .search {
     width: 551px;
   }
-  .container .searchGif_container {
+  .container .searchGif .containerGif {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -173,7 +175,7 @@
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
   }
-  .container .searchGif_container-img {
+  .container .searchGif .containerGif .searchGif_container-img {
     max-width: 200px;
     height: 150px;
   }
@@ -302,7 +304,7 @@
   .init-navigation .logo_mobile {
     padding: 18px 0 12px 156px;
   }
-  .container .searchGif_container-img {
+  .container .searchGif .containerGif .searchGif_container-img {
     width: 260px;
     height: 200px;
   }

@@ -5,6 +5,9 @@
     .container{
         .searchGif {
             text-align: center;
+            &_results-line {
+                width: 300px;
+            }
             .containerGif {
                 flex-flow: row wrap;
                 justify-content: center;
@@ -107,6 +110,9 @@
             width: 551px;
         }
         .searchGif { 
+            &_results-line {
+                width: 338px;
+            }
             .containerGif {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;

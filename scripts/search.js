@@ -3,6 +3,8 @@
  */
 
 import capitalize from './helpers.js';
+import addFavorites from './main.js';
+
 
 const searchGif = document.querySelector(".search-input");
 let gif = '';
@@ -43,7 +45,6 @@ let gif = '';
     }
     show();
     let cards = document.querySelectorAll('.searchGif_container');
-    console.log(cards);
     cards.forEach(card => {
       let image = card.querySelector('.searchGif_container-img').src;
       let heartIcon = card.querySelector('.heart-fav');
@@ -95,8 +96,8 @@ function moreGifs() {
 
 
 function show() {
-  //document.querySelector(".searchGif").classList.remove('hidden');
-  document.querySelector('..searchGif').classList.remove('hidden');
+  document.querySelector('.searchGif').classList.remove('hidden');
+  document.querySelector('.searchGif_results-line').classList.remove('hidden');
   document.querySelector(".searchGif_name").classList.remove('hidden');
   document.querySelector(".searchGif_name").innerHTML = capitalize(myInput.value);
   //document.querySelector(".search-without-results").classList.add("hidden");

@@ -321,8 +321,9 @@
 }
 
 .container .searchGif_results-line {
+  width: 250px;
   opacity: 0.5;
-  border: 1px solid #9CAFC3;
+  border: 0.1px solid #9CAFC3;
 }
 
 .container .searchGif_name {
