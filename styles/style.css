@@ -1100,7 +1100,7 @@ body {
         grid-template-rows: 1fr 1fr 1fr;
   }
   .container .searchGif .containerGif .searchGif_container-img {
-    max-width: 200px;
+    width: 200px;
     height: 150px;
   }
   .container .trending_topics {
@@ -1930,7 +1930,7 @@ body {
         grid-template-rows: 1fr 1fr 1fr;
   }
   .container .searchGif .containerGif .searchGif_container-img {
-    max-width: 200px;
+    width: 200px;
     height: 150px;
   }
   .container .trending_topics {

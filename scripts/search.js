@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-
+import api from './services.js';
 import capitalize from './helpers.js';
 import addFavorites from './main.js';
 
@@ -9,16 +9,16 @@ import addFavorites from './main.js';
 const searchGif = document.querySelector(".search-input");
 let gif = '';
 
+const trendingWords = document.querySelector(".trending_topics-words");
+let item = '';
+
+
 //SEARCH GIF
 /**
  * @method search
  * @description - busca los gifs segun el valor ingresado por el usuario
  * @param {*} value 
  */
-/*
-const searchRight = document.querySelector('.search-icon-right');
-searchRight.addEventListener('click', search);
-*/
 
  function search(value) {
   const URL = `https://api.giphy.com/v1/gifs/search?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs&q=${value}&limit=12&rating=g`;
@@ -27,15 +27,6 @@ searchRight.addEventListener('click', search);
     return response.json();
   })
   .then(async (json) => {
-    /*let imagesGif = json.data;
-    console.log(imagesGif);
-    containerGif.innerHTML = '';
-    for(let i = 0 ; i < imagesGif.length; i++ ){
-      let node = document.createElement('img');
-      node.src = imagesGif[i].images.downsized.url;
-      node.className = 'searchGif_container-img';
-      containerGif.appendChild(node);
-    }*/
     let images = json.data;
     console.log(images);
     const containerGif = document.querySelector('.containerGif');
@@ -71,7 +62,6 @@ searchRight.addEventListener('click', search);
         addFavorites(image, heartIcon.id);
       });
     });
-    //searchGif.value = "";
   }).catch((error) => {return error})
 }
 
@@ -154,31 +144,6 @@ function getAutocomplete() {
       close.addEventListener('click', removeValue);
       a.appendChild(b);
     }
-    /*inp.addEventListener('keydown', function(e) {
-      let x = document.getElementById(that.id + "autocomplete-list");
-      if (x) x = x.getElementsByTagName("div");
-      if (e.keyCode == 40) {
-        /*If the arrow DOWN key is pressed,
-        increase the currentFocus variable:*/
-    //    currentFocus++;
-    //    console.log(currentFocus);
-        /*and and make the current item more visible:*/
-    //    addActive(x);
-    //  } else if (e.keyCode == 38) { //up
-        /*If the arrow UP key is pressed,
-        decrease the currentFocus variable:*/
-    //    currentFocus--;
-        /*and and make the current item more visible:*/
-    //    addActive(x);
-    //  } else if (e.keyCode == 13) {
-        /*If the ENTER key is pressed, prevent the form from being submitted,*/
-    //    e.preventDefault();
-    //    if (currentFocus > -1) {
-          /*and simulate a click on the "active" item:*/
-    /*      if (x) x[currentFocus].click();
-        }
-      }
-    });*/
   }).catch((error) => {return error})
 }
 
@@ -196,18 +161,39 @@ function closeAllLists() {
   document.querySelectorAll('.search-autocomplete_list').forEach((a) => a.className = 'search-autocomplete_list hidden');
 }
 
-/*function addActive(x) {
-    if (!x) return false;
-  removeActive(x);
-  if (currentFocus >= x.length) currentFocus = 0;
-  if (currentFocus < 0) currentFocus = (x.length - 1);
-  x[currentFocus].classList.add("autocomplete-active");
+/**
+ * @method trendingSearch
+ * @description - funcion que muestra las palabras trendings
+ * @return {}
+ */
+function trendingSearch() {
+  api.trendingTopic()
+  .then((json) => {
+    let info = json.data.slice(0, 5);
+    info.forEach(word => {
+    item += markUp(word);
+    trendingWords.innerHTML = item;
+    trendingWords.querySelectorAll('.trending_topics-words-list').forEach((element) => element.addEventListener('click', selectedSuggestion));
+    })
+  })
+  .catch((error) => {return error})
 }
-function removeActive(x) {
-  for (var i = 0; i < x.length; i++) {
-    x[i].classList.remove("autocomplete-active");
-  }
-}*/
+trendingSearch();
+
+const markUp = ((word) => {
+  return (`<li class="trending_topics-words-list"><a href='#search' class="topic_list">${capitalize(word)}</a></li>`);
+});
+
+/**
+ * @method selectedSuggestion
+ * @param {event}
+ * @description - funcion para buscar la palabra trending seleccionada 
+ * @return {}
+ */
+function selectedSuggestion(event) {
+  searchGif.value = event.target.innerText;
+  search(event.target.innerText);
+}
 
 //------------------------------------------------------------------
 

@@ -37,10 +37,8 @@ function verifyDarkMode() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', verifyDarkMode);
-
 /**
  * LISTENER
  */
-
+document.addEventListener('DOMContentLoaded', verifyDarkMode);
 blackout.addEventListener('click', changeMode);
