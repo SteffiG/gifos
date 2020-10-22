@@ -38,7 +38,6 @@ const searchGif = document.querySelector(".search-input");
 function selectedSuggestion(event) {
   searchGif.value = event.target.innerText;
   search(event.target.innerText);
-  //document.querySelector('.')
 }
 
 //FAVORITES
@@ -63,13 +62,18 @@ function getTrendingGifos() {
   api.gifosTrending()
   .then(async (json) => {
     let images = json.data;
+    console.log(images);
     let containerSlider = document.querySelector('.card');
     for(let i = 0 ; i < images.length; i++){
       let image = await fetch(images[i].images.downsized.url);
       let imageConverted = await image.blob();
+      /*let title = card.querySelector('.information__gif--title');
+      title = images[i].title;
+      let user = card.querySelector('.information__gif--user');
+      user = image[i].user;*/
       let favorites = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites'))  : null;
       let srcHeart = favorites != null && favorites[images[i].id] ? '/assets/icon-fav-active.svg' : '/assets/icon-fav-hover.svg';
-      gif += markUpGifTrending(window.URL.createObjectURL(imageConverted), images[i].id, srcHeart);
+      gif += markUpGifTrending(window.URL.createObjectURL(imageConverted), images[i].id, srcHeart, images[i].username, images[i].title);
       containerSlider.innerHTML = gif;
     }
 
@@ -135,10 +139,8 @@ const markUpGifTrending = ((url, id, srcHeart, user, title) => {
     <img class="icon-max" src="./assets/icon-max.svg" alt="Enlarge Gif">
     </a>
     <div class="overlay">
-      <div class="information__gif">
-      <p class="information__gif--user">${user}</p>
-      <p class="information__gif--title">${title}</p>
-      </div>
+    <p class="information__gif--user">${user}</p>
+    <p class="information__gif--title">${title}</p>
     </div>
     </div>`
   );

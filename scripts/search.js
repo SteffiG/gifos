@@ -52,7 +52,7 @@ searchRight.addEventListener('click', search);
       let imageConverted = await image.blob();
       let favorites = localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites'))  : null;
       let srcHeart = favorites != null && favorites[images[i].id] ? '/assets/icon-fav-active.svg' : '/assets/icon-fav-hover.svg';
-      gif += markUpGif(window.URL.createObjectURL(imageConverted), images[i].id, srcHeart);
+      gif += markUpGif(window.URL.createObjectURL(imageConverted), images[i].id, srcHeart, images[i].username, images[i].title);
       containerGif.innerHTML = gif;
     }
     let cards = document.querySelectorAll('.searchGif_container');
@@ -89,10 +89,8 @@ const markUpGif = ((url, id, srcHeart, user, title) => {
     <img class="icon-max" src="./assets/icon-max.svg" alt="Enlarge Gif">
     </a>
     <div class="overlay">
-      <div class="information__gif">
       <p class="information__gif--user">${user}</p>
       <p class="information__gif--title">${title}</p>
-      </div>
     </div>
   </div>`
   );

@@ -240,6 +240,7 @@
 }
 
 .container .search .search-container .close-icon {
+  cursor: pointer;
   background-color: white;
   padding: 0;
   border: 27px;
