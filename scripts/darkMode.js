@@ -13,15 +13,15 @@ const logo = document.querySelector('.logo_mobile');
 
 const changeMode = (event) => {
     document.body.classList.toggle('oscuro');
-    if(event.target.innerHTML === 'Modo Nocturno' && logo.src ===`./assets/logo_light.png`) {
+    if(event.target.innerHTML === 'Modo Nocturno' && logo.src ===`${baseUrl}/assets/logo_light.png`) {
         localStorage.setItem('darkMode', 'true');
         document.getElementById('changeMode').innerHTML = 'Modo Diurno';
-        logo.src = `./assets/logo_black.png`;
+        logo.src = `${baseUrl}/assets/logo_black.png`;
     } else {
         console.log('false');
         localStorage.setItem('darkMode', 'false');
         document.getElementById('changeMode').innerHTML = 'Modo Nocturno';
-        logo.src = `./assets/logo_light.png`;
+        logo.src = `${baseUrl}/assets/logo_light.png`;
     }
 };
 
@@ -29,11 +29,11 @@ function verifyDarkMode() {
     if(localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('oscuro');
         document.getElementById('changeMode').innerHTML = 'Modo Diurno';
-        logo.src = `./assets/logo_black.png`;
+        logo.src = `${baseUrl}/assets/logo_black.png`;
     } else {
         document.body.classList.remove('oscuro');
         document.getElementById('changeMode').innerHTML = 'Modo Nocturno';
-        logo.src = `./assets/logo_light.png`;
+        logo.src = `${baseUrl}/assets/logo_light.png`;
     }
 }
 

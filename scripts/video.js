@@ -51,6 +51,8 @@ async function getStreamAndRecord() {
         videoGif(stream);
         record.classList.remove('hidden');
         const recorder = creatingRecorder(stream);
+        circle[0].classList.toggle('active');
+        circle[1].classList.toggle('active');
         record.addEventListener('click', () => recording(recorder));
         end.addEventListener('click', () => stopRecording(recorder));
     }
@@ -106,8 +108,8 @@ function recording(recorder) {
   recorder.startRecording();
   record.classList.add("hidden");
   end.classList.remove("hidden");
-  circle[0].classList.toggle("active");
-  circle[1].classList.toggle("active");
+  //circle[0].classList.toggle("active");
+  //circle[1].classList.toggle("active");
 };
 
 /**
@@ -193,7 +195,7 @@ function load() {
 function loadVideoGif() {
   repeat.classList.add('hidden');
   up.classList.add('hidden');
-  circle[1].classList.add('active');
+  circle[1].classList.toggle('active');
   circle[2].classList.add('active');
 }
 

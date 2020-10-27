@@ -1,7 +1,7 @@
+const viewFavorites = document.querySelector('.view-section_img');
 
 function createFavorites() {
   const arrLocal = recover();
-  let  viewFavorites = document.querySelector('.view-section_img');
   for(let i in arrLocal) {
     let gifFavorite = document.createElement('img');
     gifFavorite.src = arrLocal[i];
@@ -10,7 +10,9 @@ function createFavorites() {
   }
 }
 
+let favorites;
 function recover() {
+  //return JSON.parse(localStorage.getItem('favorites'));
   return JSON.parse(localStorage.getItem('favorites'));
 }
 

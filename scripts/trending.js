@@ -83,7 +83,7 @@ function getTrendingGifos() {
       <a href='${url}' class="card-gif_link hidden" download>
       <img class="icon-download" src="./assets/icon-download.svg" alt="download">
       </a>
-      <a href="#/" class="card-gif_link hidden">
+      <a href='${url}' class="card-gif_link hidden">
       <img class="icon-max" src="./assets/icon-max.svg" alt="Enlarge Gif">
       </a>
       <div class="overlay">
