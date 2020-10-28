@@ -18,7 +18,8 @@ const api = {
 
     uploadGif: ((infoGif) => {
         return new Promise((resolve, reject) => {
-            fetch('https://upload.giphy.com/v1/gifs?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs', { method: 'POST', body: infoGif })
+            fetch('https://upload.giphy.com/v1/gifs?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs', { method: 'POST', body: infoGif, 'mode': 'no-cors',
+	        'headers': {'Access-Control-Allow-Origin': '*' }})
                 .then(response => { resolve(response.json()) })
                 .catch(error => { reject(error) })
         });

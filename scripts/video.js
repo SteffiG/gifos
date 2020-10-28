@@ -72,7 +72,7 @@ function videoGif(stream) {
   paragraph.classList.add('hidden');
   video.classList.remove('hidden');
   video.srcObject = stream;
-  video.play()
+  video.play();
 }
 
 /**
@@ -129,12 +129,12 @@ function stopRecording(recorder) {
   recorder.stopRecording(() => {
     let form = new FormData();
     form.append('file', recorder.getBlob(), 'myGif.gif');
-    console.log(form.get('file'))
+    console.log(form.get('file'));
     infoGif = form;
   })
-  //video.srcObject = null;
+  video.srcObject = null;
   recorder.camera.stop();
-  //recorder = null;
+  recorder = null;
 }
 
 /**
@@ -186,8 +186,12 @@ function load() {
   loadVideoGif();
   api.uploadGif()
   .then((json) => {
+    //console.log(json);
     console.log(json);
-  })
+    //addGifLocalStorage(response.data.id);
+    //getGifByID(response.data.id);
+
+  }).catch((error) => { return(error) });
   console.log('hii');
   
 }
