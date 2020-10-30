@@ -3,13 +3,12 @@
  */
 import api from './services.js';
 import capitalize  from './helpers.js';
-//import search from './search.js';
-//import search from './search.js';
+import search from './search.js';
 
 /**
  * Global variables
  */
-/*const trendingWords = document.querySelector(".trending_topics-words");
+const trendingWords = document.querySelector(".trending_topics-words");
 let item = '';
 
 /**
@@ -19,7 +18,7 @@ let item = '';
  */
 
 //TRENDING SEARCH
-/*function trendingSearch() {
+function trendingSearch() {
   api.trendingTopic()
   .then((json) => {
     let info = json.data.slice(0, 5);
@@ -43,11 +42,11 @@ const markUp = ((word) => {
  * @description - funcion para buscar la palabra trending seleccionada 
  * @return {}
  */
-/*function selectedSuggestion(event) {
+function selectedSuggestion(event) {
   searchGif.value = event.target.innerText;
   search(event.target.innerText);
 }
-*/
+
 /**
  * @method addFavorites
  * @param {favorite, id}

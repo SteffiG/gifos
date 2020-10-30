@@ -108,8 +108,6 @@ function recording(recorder) {
   recorder.startRecording();
   record.classList.add("hidden");
   end.classList.remove("hidden");
-  //circle[0].classList.toggle("active");
-  //circle[1].classList.toggle("active");
 };
 
 /**
@@ -119,7 +117,8 @@ function recording(recorder) {
  */
 
 let infoGif; 
-
+const gifoCreated = document.querySelector('.videoGifo__created');
+const containerVideoGif = document.querySelector('.videoGifo');
 function stopRecording(recorder) {
   stopCount();
   timer.classList.add('hidden');
@@ -134,6 +133,10 @@ function stopRecording(recorder) {
   })
   video.srcObject = null;
   recorder.camera.stop();
+  gifoCreated.src = URL.createObjectURL(recorder.getBlob());
+  video.classList.add('hidden');
+  containerVideoGif.classList.remove('hidden');
+  gifoCreated.classList.remove('hidden');
   recorder = null;
 }
 
@@ -179,26 +182,71 @@ const stopCount = () => {
 function repeatVideoGif() {
   repeat.classList.add('hidden');
   up.classList.add('hidden');
+  containerVideoGif.classList.add('hidden');
   getStreamAndRecord(); 
 }
 
 function load() {
   loadVideoGif();
-  api.uploadGif()
-  .then((json) => {
-    //console.log(json);
-    console.log(json);
-    //addGifLocalStorage(response.data.id);
-    //getGifByID(response.data.id);
-
+  api.uploadGif(infoGif)
+  .then((response) => {
+    getGifByID(response.data.id);
+    addNewGif(response.data, response.data.id);
+    document.querySelector('.load').classList.remove('hidden');
+    document.querySelector('.load__gifo').classList.remove('hidden');
+    document.querySelector('.load__succesful').classList.remove('hidden');
+    document.querySelector('.caard-gif_link').classList.remove('hidden');
+    
   }).catch((error) => { return(error) });
-  console.log('hii');
-  
 }
+
+/*function addNewGif(gif, id) {
+  let gifCreated = localStorage.getItem('gifCreated') ? JSON.parse(localStorage.getItem('gifCreated')) : {};
+  if(!gifCreated[id]){
+    gifCreated[id] = gif;
+  } else {
+    delete gifCreated[id];
+  }
+  localStorage.setItem('gifCreated', JSON.stringify(gifCreated));
+}
+*/
+
+/*const addGifCreated = ((gifo) => {
+  let gifCreate = JSON.parse(localStorage.getItem(createGif)) || [];
+  gifCreate.push(gifo);
+
+  localStorage.setItem(createGif, JSON.stringify(gifCreate));
+});
+*/
+
+const getGifByID = ((gifID) => {
+  const { gifByIDData } = api;
+  gifByIDData(getGIFbyIDURL, gifID, api_key)
+  .then((response) => {
+    console.log(response);
+      newGifoURL.href = response.data.url;
+      document.querySelector('.loading').classList.remove('hidden');
+      document.querySelector('.load').classList.remove('hidden');
+  }).catch((error) => { return(error)});
+});
+
+
+
+/*
+document.querySelector('.loading').classList.add('hidden');
+document.querySelector('.loading__gifo').classList.add('hidden');
+document.querySelector('.loading__process').classList.add('hidden');
+document.querySelector('.load').classList.add('hidden');
+document.querySelector('.load__gifo').classList.add('hidden');
+document.querySelector('.load__succesful').classList.add('hidden');
+document.querySelector('.caard-gif_link').classList.add('hidden');
+*/
+
 
 function loadVideoGif() {
   repeat.classList.add('hidden');
   up.classList.add('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
   circle[1].classList.toggle('active');
   circle[2].classList.add('active');
 }

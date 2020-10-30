@@ -16,10 +16,18 @@ const api = {
         })
     }),
 
+    gifsByIDData: ((ids) => {
+        return new Promise((resolve, reject) => {
+          fetch(`https://api.giphy.com/v1/gifs?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs&ids=${ids}`)
+          .then((response) => resolve(response.json()))
+          .catch((error) => reject(error))
+        });
+    }),
+
     uploadGif: ((infoGif) => {
         return new Promise((resolve, reject) => {
             fetch('https://upload.giphy.com/v1/gifs?api_key=A1hJOpkrFlJITK2YiwMHoqqnOKdoKKYs', { method: 'POST', body: infoGif, 'mode': 'no-cors',
-	        'headers': {'Access-Control-Allow-Origin': '*' }})
+        /*'headers': {'Access-Control-Allow-Origin': '*' }*/})
                 .then(response => { resolve(response.json()) })
                 .catch(error => { reject(error) })
         });

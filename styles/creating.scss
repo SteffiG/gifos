@@ -1,5 +1,6 @@
 @import 'variables.scss';
 @import 'media.scss';
+@import 'mixins.scss';
 
 .creating {
     position: relative;
@@ -56,6 +57,54 @@
         }
         .video {
             padding: 2em; 
+        }
+        .videoGifo {
+            position: relative;
+            padding: 2em;
+            width: 480px;
+            height: 320px;
+            .videoGifo__created {
+                width: 480px;
+                height: 320px;
+            }
+            .overlay {
+                position: absolute;
+                z-index: 10;
+                top: 8%;
+                height: 320px;
+                width: 480px;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #572EE5;
+                opacity: 0.6;
+                .loading {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__process {
+                        font-family: $robot;
+                        font-size: 1em;
+                    }
+                }
+                .load {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__succesful {
+                        font-family: $robot;
+                        font-size: 1em;
+                    }
+                    .card-gif_link {
+                        .icon-download{
+                            @include icon($right: 90px);
+                        }
+                        .icon-link{
+                            @include icon($right: 40px);
+                            margin: 0 10px;
+                        }
+                    }
+                }
+            }
         }
         &--title {
             padding: 1em;
